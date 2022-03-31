@@ -5,7 +5,7 @@ import Image from "next/image";
 import HoloButton from "./HoloButton";
 import TypeWriter from "./Typewriter"
 
-const Api: React.VFC = () => {
+const Main: React.VFC = () => {
   const [holoData, setHoloData] = useState<any>([])
   const [active, setActive] = useState<boolean>(false)
   const [active2, setActive2] = useState<boolean>(false)
@@ -25,9 +25,9 @@ const Api: React.VFC = () => {
   const typeWriter = ["ぼたんをぜ~~っったいにおすんじゃ~ないよ~~そこのクマ~~!", "こんにちは!"];
 
   const style = {
-    panel: `hover:shadow-[0_0px_0px_1px_#f00] flex-1 object-cover cursor-pointer opacity-20 mr-1 mt-1 hover:opacity-80 bg-slate-100 hover:blur-none w-[100px] h-[70px] rounded-[10px]`,
-    panel2: `hover:shadow-[0_0px_0px_1px_#f00] flex-1 object-cover cursor-pointer opacity-20 mr-1 mt-1 hover:opacity-80 bg-slate-100 hover:blur-none w-[200px] h-[140px] rounded-[10px]`,
-    panel3_light: `hover:shadow-none flex-1 object-cover cursor-pointer opacity-90 mr-1 mt-1 hover:opacity-30 bg-slate-100 hover:blur-none w-[100px] h-[70px] rounded-[10px]`,
+    panel: `hover:shadow-[0_0px_0px_1px_#f00] flex-1 object-cover cursor-pointer opacity-[0.2] mr-1 mt-1 hover:opacity-[0.8] bg-slate-100 hover:blur-none w-[100px] h-[70px] rounded-[10px]`,
+    panel2: `hover:shadow-[0_0px_0px_1px_#f00] flex-1 object-cover cursor-pointer opacity-[0.2] mr-1 mt-1 hover:opacity-[0.8] bg-slate-100 hover:blur-none w-[200px] h-[140px] rounded-[10px]`,
+    panel3_light: `hover:shadow-none flex-1 object-cover cursor-pointer opacity-[0.85] mr-1 mt-1 hover:opacity-[0.19] bg-slate-100 hover:blur-none w-[100px] h-[70px] rounded-[10px]`,
   }
 
   const youtube_jpeg_size = {
@@ -140,8 +140,9 @@ const Api: React.VFC = () => {
                                       <img
                                         onClick={() => window.open(`https://www.youtube.com/watch?v=${holoDatas.id}`)}
                                         key={holoDatas.id}
-                                        className={`${(!active ? style.panel : style.panel2)}  ${(!active3 ? style.panel : style.panel3_light)}`} 
-                                        src={`${youtube_jpeg + holoDatas.id + youtube_jpeg_size.large}`} />
+                                        className={`${(!active ? style.panel : style.panel2)}
+                                          ${(!active3 ? style.panel : style.panel3_light)}`}
+                                    src={`${youtube_jpeg + holoDatas.id + youtube_jpeg_size.large}`} />
                             ) : null
                           }
                         )}
@@ -246,8 +247,8 @@ const Api: React.VFC = () => {
           <div className='flex items-end'>
             <div className='flex items-end'>
               <Image className="" src='/download-2.webp' width={50} height={50}/>
-              
-                <div className='p-2 text-white rounded-full bg-[#111111aa] sm:text-[14px] text-[10px]'><TypeWriter data={typeWriter} /></div>
+
+              <div className='p-2 text-white rounded-full bg-[#111111aa] sm:text-[14px] text-[10px]'><TypeWriter data={typeWriter} /></div>
             </div>
             <HoloButton classToggle2={classToggle2}/>
           </div>
@@ -256,10 +257,7 @@ const Api: React.VFC = () => {
     </div>
   )
 }
-export default Api
-
-
-
+export default Main
 
 
 
