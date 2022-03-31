@@ -1,3 +1,157 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  background: #112;
+}
+
+.nav-button {
+  box-sizing: content-box;
+  padding-top: 3px;
+  width: 50px;
+  height: 2px;
+  color: #fff;
+  cursor: default;
+}
+
+.nav-button::before {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 2px;
+  background-color: #2e5180;
+  cursor: default;
+}
+
+.nav-button2 {
+  box-sizing: content-box;
+  padding-top: 3px;
+  width: 50px;
+  height: 2px;
+  color: #fff;
+  cursor: default;
+}
+
+.nav-button2::before {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 2px;
+  background-color: #888;
+  cursor: default;
+} 
+
+.hover {
+  position: absolute;
+  width: 100vw;
+  height: 12vh;
+  overflow: hidden;
+}
+.hover .hover-img {
+  margin: 0;
+  padding: 0;
+}
+.hover-img img {
+  width: 100%;
+  height: 100%;
+}
+.hover .hover-text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  color: #fff;
+  background-color: rgba(0,0,0,0.6);
+  /*透明にして表示させない*/
+  opacity: 0;
+  /*ホバーの動き方*/
+  transition: 0.3s ease-in-out;
+}
+.hover .hover-text .text1 {
+  font-size: 14px;
+  padding: 0 20px 0px;
+}
+@media screen and (max-width: 640px) {
+  .hover .hover-text .text1 {
+    font-size: 10px;
+  }
+}
+/*ホバーエフェクト*/
+.hover:hover .hover-text {
+  /*不透明にして表示*/
+  opacity: 1;
+  /*padding-topで上からスライド*/
+  padding-top: 1vh;
+}
+
+
+
+
+.hover2 {
+  position: absolute;
+  width: 100vw;
+  height: 10vh;
+}
+.hover2 .hover-img2 {
+  margin: 0;
+  padding: 0;
+}
+.hover-img2 img {
+  width: 100%;
+  height: 100%;
+}
+.hover2 .hover-text2 {
+  z-index: 1;
+  position: fixed;
+  width: 100%;
+  height: 70vh;
+  top: 0px;
+  left: 0;
+  color: #fff;
+  background-color: rgba(0,0,0,0.6);
+  backdrop-filter: blur(1px);
+  /*透明にして表示させない*/
+  opacity: 1;
+  /*ホバーの動き方*/
+  transition: 0.3s ease-in-out;
+}
+.hover2 .hover-text2 .text2 {
+  font-size: 12px;
+  padding: 0 20px 0px;
+}
+@media screen and (max-width: 640px) {
+  .hover2 .hover-text2 .text2 {
+    font-size: 10px;
+  }
+}
+
+.none {
+  opacity: 0;
+  filter: blur(8px);
+  z-index: -1;
+  position: absolute;
+  overflow: hidden;
+  top: -614px;
+}
+
+.blur-box {
+  z-index: 1;
+  position: fixed;
+  width: 100%;
+  height: 70vh;
+  top: 0px;
+  left: 0;
+  color: #fff;
+  background-color: rgba(156,156,186,0.2);
+  filter: blur(18px);
+  /*透明にして表示させない*/
+  opacity: 1;
+  /*ホバーの動き方*/
+  transition: 1.8s ease-in-out;
+}
+
