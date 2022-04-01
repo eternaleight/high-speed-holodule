@@ -73,37 +73,6 @@ const Main: React.VFC = () => {
     } HoloApi()
   },[holoUrl])
 
-{holoData.map (
-  (holoDatas: any) =>  {
-    return (holoDatas.channel.org === "Hololive" &&
-            holoDatas.status === "live" &&
-            holoDatas.channel.id !== 'UCKeAhJvy8zgXWbh9duVjIaQ' &&
-            holoDatas.channel.id !== 'UCZgOv3YDEs-ZnZWDYVwJdmA' &&
-            holoDatas.channel.id !== 'UC9mf_ZVpouoILRY9NUIaK-w' &&
-            holoDatas.channel.id !== 'UCNVEsYbiZjH5QLmGeSgTSzg' &&
-            holoDatas.channel.id !== 'UCGNI4MENvnsymYjKiZwv9eg' &&
-            holoDatas.channel.id !== 'UCANDOlYTJT7N5jlRC3zfzVA' &&
-            holoDatas.channel.id !== 'UChSvpZYRPh0FvG4SJGSga3g' &&
-            holoDatas.channel.id !== 'UCwL7dgTxKo8Y4RFIKWaf8gA' &&
-            holoDatas.channel.id !== 'UC6t3-_N8A6ME1JShZHHqOMw' &&
-            holoDatas.channel.id !== '' &&
-            holoDatas.channel.id !== 'UCc88OV45ICgHbn3ZqLLb52w' &&
-            holoDatas.channel.id !== 'UCgRqGV1gBf2Esxh0Tz1vxzw' &&
-            holoDatas.channel.id !== 'UCkT1u65YS49ca_LsFwcTakw' &&
-            holoDatas.channel.id !== 'UCdfMHxjcCc2HSd9qFvfJgjg' &&
-            holoDatas.channel.id !== '' &&
-            holoDatas.channel.id !== 'UCWsfcksUUpoEvhia0_ut0bA') ? (
-              <div>
-                <img
-                  key={holoDatas.id}
-                  onClick={() => window.open(`${holoVideo}${holoDatas.id}`)}
-                  className='cursor-pointer w-[100px]' 
-                  src={holoDatas.channel.photo} />
-                <p className='w-[300px] text-[14px] text-white'>{holoDatas.title}</p>
-              </div>
-    ) : null
-  }
-)}
 
 
   let ytUrl = 'sqEd2W6TEgk'
@@ -111,10 +80,69 @@ const Main: React.VFC = () => {
     async function th() {
       const th2 = await getYtThumbnail(ytUrl)
       setThumbnail(th2)
-       console.log(th2)
+      console.log(th2)
     } th()
   },[ytUrl])
   // (holoDatas.channel.id === "UCoztvTULBYd3WmStqYeoHcA" | holoDatas.channel.id === "UC_4tXjqecqox5Uc05ncxpxg"
+
+  // const [mapUrl, setMapUrl] = useState([])
+  // useEffect(() => {
+  //   const update = () => {
+  //     setMapUrl(
+  //       holoData.filter(
+  //         (holoDatas2: any) => (
+  //           holoDatas2.channel.org === "Hololive" &&
+  //             holoDatas2.status === "upcoming" &&
+  //             holoDatas2.channel.id !== 'UCKeAhJvy8zgXWbh9duVjIaQ' &&
+  //             holoDatas2.channel.id !== 'UCZgOv3YDEs-ZnZWDYVwJdmA' &&
+  //             holoDatas2.channel.id !== 'UC9mf_ZVpouoILRY9NUIaK-w' &&
+  //             holoDatas2.channel.id !== 'UCNVEsYbiZjH5QLmGeSgTSzg' &&
+  //             holoDatas2.channel.id !== 'UCGNI4MENvnsymYjKiZwv9eg' &&
+  //             holoDatas2.channel.id !== 'UCANDOlYTJT7N5jlRC3zfzVA' &&
+  //             holoDatas2.channel.id !== 'UChSvpZYRPh0FvG4SJGSga3g' &&
+  //             holoDatas2.channel.id !== 'UCwL7dgTxKo8Y4RFIKWaf8gA' &&
+  //             holoDatas2.channel.id !== 'UC6t3-_N8A6ME1JShZHHqOMw' &&
+  //             holoDatas2.channel.id !== '' &&
+  //             holoDatas2.channel.id !== 'UCc88OV45ICgHbn3ZqLLb52w' &&
+  //             holoDatas2.channel.id !== 'UCgRqGV1gBf2Esxh0Tz1vxzw' &&
+  //             holoDatas2.channel.id !== 'UCkT1u65YS49ca_LsFwcTakw' &&
+  //             holoDatas2.channel.id !== 'UCdfMHxjcCc2HSd9qFvfJgjg' &&
+  //             holoDatas2.channel.id !== '' &&
+  //             holoDatas2.channel.id !== 'UCWsfcksUUpoEvhia0_ut0bA') ? (holoDatas2.channel.id) : null )
+  //     );
+  //   };
+  //     update()
+  // },[])
+  // console.log(mapUrl)
+
+  // const initialState = [
+  //   "baseboll",
+  //   "soccer",
+  //   "basketball",
+  //   "volleyball",
+  //   "tennis"
+  // ];
+
+  // const [sports, setSports] = useState(initialState);
+  // useEffect (() => {
+
+  //   const updateSportsList = () => {
+  //     setSports(
+  //       sports.map((sport, index) => (index === 2 ? "badminton" : sport))
+  //     );
+  //   };
+  //   updateSportsList()
+  // },[])
+  // console.log(sports)
+
+  // useEffect(() => {
+  //   (async () => {
+  //     const url = await getYtThumbnail(
+  //       mapUrl.map(
+  //         (mapUrls: any) => (mapUrls.channel.id)))
+  //   })
+  // },[])
+
 
   return (
     <div>
@@ -187,7 +215,7 @@ const Main: React.VFC = () => {
                                         key={holoDatas.id}
                                         className={`${(!active ? style.panel : style.panel2)}
                                           ${(!active3 ? style.panel : style.panel3_light)}`}
-                                          src={holoDatas.channel.id === 'UCvaTdHTWBGv3MKj3KVqJVCw' ? youtube_jpeg + holoDatas.id + youtube_jpeg_size.midium : youtube_jpeg + holoDatas.id + youtube_jpeg_size.large} />
+                                        src={holoDatas.channel.id === 'UCvaTdHTWBGv3MKj3KVqJVCw' ? youtube_jpeg + holoDatas.id + youtube_jpeg_size.midium : youtube_jpeg + holoDatas.id + youtube_jpeg_size.large} />
                             ) : null
                           }
                         )}
@@ -221,15 +249,15 @@ const Main: React.VFC = () => {
                                         onClick={() => window.open(`https://www.youtube.com/watch?v=${holoDatas.id}`)}
                                         key={holoDatas.id}
                                         className='hover:shadow-[0_0px_0px_1px_#fff] flex-1 object-cover cursor-pointer opacity-20 mr-1 mt-1 hover:opacity-80 bg-slate-100 hover:blur-none w-[100px] h-[70px] rounded-[10px]'
-                                          // src={thumbnail} />
-                                          src={holoDatas.channel.id === 'UCvaTdHTWBGv3MKj3KVqJVCw' ? youtube_jpeg + holoDatas.id + youtube_jpeg_size.midium : youtube_jpeg + holoDatas.id + youtube_jpeg_size.large} />
+                                        // src={thumbnail} />
+                                        src={holoDatas.channel.id === 'UCvaTdHTWBGv3MKj3KVqJVCw' ? youtube_jpeg + holoDatas.id + youtube_jpeg_size.midium : youtube_jpeg + holoDatas.id + youtube_jpeg_size.large} />
                             ) : null
                           }
                         )}
-                                      </li>
+                      </li>
                                )}
                       <h2 className='mt-3 text-white opacity-20 hover:opacity-80'>放送予定</h2>
-                      </ul>
+                    </ul>
                     <div className='pr-2'>
                       <div className='flex flex-wrap w-[80px]'>
                         <button type='button' className='nav-button' onClick={classToggle}></button>
@@ -273,15 +301,15 @@ const Main: React.VFC = () => {
                       </div>
                       <Link href={youtube}><img className='rounded-[10px] mt-[50px] mr-3 w-[8em] h-[4.8em] md:mt-[100px] md:w-[8em] md:h-[4.8em] hover:cursor-pointer opacity-20 hover:opacity-80 object-cover duration-300' src={`${youtube_jpeg}${youtube_id}${(youtube_id !== 'SIQ3DfHrd60') ? youtube_jpeg_size.large : youtube_jpeg_size.midium}`} /></Link>
                     </div>
-                    </div>
+                  </div>
                   <div className='flex flex-wrap pt-5'>
                   </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
+      </div>
       <section className="hover2">
         <div className='hover-img2'>
           <div className={`${active2 ? 'blur-box' : 'none' }`}></div>
@@ -294,13 +322,13 @@ const Main: React.VFC = () => {
             <div className='flex items-end'>
               <Image className="" src='/download-2.webp' width={50} height={50}/>
 
-              <div className='p-2 text-white rounded-full bg-[#111111aa] sm:text-[14px] text-[10px]'><TypeWriter data={typeWriter} /></div>
+              <div className='p-2 text-white rounded-full bg-[#111111aa] sm:text-[12px] text-[0.5rem]'><TypeWriter data={typeWriter} /></div>
             </div>
             <HoloButton classToggle2={classToggle2}/>
           </div>
         </div>
       </section>
-      </div>
+    </div>
   )
 }
 export default Main
