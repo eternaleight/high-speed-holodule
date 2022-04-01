@@ -322,7 +322,7 @@ const Main: React.VFC = () => {
             <div className='flex items-end'>
               <Image className="" src='/download-2.webp' width={50} height={50}/>
 
-              <div className='p-2 text-white rounded-full bg-[#111111aa] sm:text-[12px] text-[0.5rem]'><TypeWriter data={typeWriter} /></div>
+              <div className='p-2 w-[150px] text-white rounded-full bg-[#111111aa] sm:text-[12px] text-[0.5rem]'><TypeWriter data={typeWriter} /></div>
             </div>
             <HoloButton classToggle2={classToggle2}/>
           </div>
