@@ -187,7 +187,7 @@ const Main: React.VFC = () => {
                                         key={holoDatas.id}
                                         className={`${(!active ? style.panel : style.panel2)}
                                           ${(!active3 ? style.panel : style.panel3_light)}`}
-                                        src={`${youtube_jpeg + holoDatas.id + youtube_jpeg_size.large}`} />
+                                          src={holoDatas.channel.id === 'UCvaTdHTWBGv3MKj3KVqJVCw' ? youtube_jpeg + holoDatas.id + youtube_jpeg_size.midium : youtube_jpeg + holoDatas.id + youtube_jpeg_size.large} />
                             ) : null
                           }
                         )}
