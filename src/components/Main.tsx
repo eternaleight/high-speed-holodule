@@ -4,16 +4,16 @@ import Button from '@mui/material/Button';
 import Image from "next/image";
 import HoloButton from "./HoloButton";
 import TypeWriter from "./Typewriter"
-// import { getYtThumbnail } from "./GetYtThumbnail";
+import LivePanel from "./LivePanel";
+import UpcomingPanel from "./UpcomingPanel";
+import PanelButton from "./Button"
 
 const Main: React.VFC = () => {
-  const [holoData, setHoloData] = useState<any>([])
+  const [holoData, setHoloData] = useState<any[]>([])
   const [active, setActive] = useState<boolean>(false)
   const [active2, setActive2] = useState<boolean>(false)
   const [active3, setActive3] = useState<boolean>(false)
-  const [thumbnail, setThumbnail] = useState<string>()
 
-  // console.log(getYtThumbnail('sqEd2W6TEgk'))
   const classToggle = () => {
     setActive(!active)
   }
@@ -26,12 +26,6 @@ const Main: React.VFC = () => {
     setActive3(!active3)
   }
   const typeWriter = ["ぼたんをぜ~~っったいにおすんじゃ~ないよ~~そこのクマ~~!", "こんにちは!"];
-
-  const style = {
-    panel: `hover:shadow-[0_0px_0px_1px_#f00] flex-1 object-cover cursor-pointer opacity-[0.2] mr-1 mt-1 hover:opacity-[0.8] bg-slate-100 hover:blur-none w-[100px] h-[70px] rounded-[10px]`,
-    panel2: `hover:shadow-[0_0px_0px_1px_#f00] flex-1 object-cover cursor-pointer opacity-[0.2] mr-1 mt-1 hover:opacity-[0.8] bg-slate-100 hover:blur-none w-[200px] h-[140px] rounded-[10px]`,
-    panel3_light: `hover:shadow-none flex-1 object-cover cursor-pointer opacity-[0.82] mr-1 mt-1 hover:opacity-[0.19] bg-slate-100 hover:blur-none w-[100px] h-[70px] rounded-[10px]`,
-  }
 
   const youtube_jpeg_size = {
     large: "/maxresdefault.jpg",
@@ -72,82 +66,6 @@ const Main: React.VFC = () => {
       return res
     } HoloApi()
   },[holoUrl])
-
-
-
-  // let ytUrl = 'sqEd2W6TEgk'
-  // useEffect(() => {
-  //   async function th() {
-  //     const th2 = await getYtThumbnail(ytUrl)
-  //     setThumbnail(th2)
-  //     console.log(th2)
-  //   } th()
-  // },[ytUrl])
-  // (holoDatas.channel.id === "UCoztvTULBYd3WmStqYeoHcA" | holoDatas.channel.id === "UC_4tXjqecqox5Uc05ncxpxg"
-
-
-  //   const update = () => {
-  //     setMapUrl(
-  //       holoData.filter(
-  //         (holoDatas2: any) => (
-  //           holoDatas2.channel.org === "Hololive" &&
-  //             holoDatas2.status === "upcoming" &&
-  //             holoDatas2.channel.id !== 'UCKeAhJvy8zgXWbh9duVjIaQ' &&
-  //             holoDatas2.channel.id !== 'UCZgOv3YDEs-ZnZWDYVwJdmA' &&
-  //             holoDatas2.channel.id !== 'UC9mf_ZVpouoILRY9NUIaK-w' &&
-  //             holoDatas2.channel.id !== 'UCNVEsYbiZjH5QLmGeSgTSzg' &&
-  //             holoDatas2.channel.id !== 'UCGNI4MENvnsymYjKiZwv9eg' &&
-  //             holoDatas2.channel.id !== 'UCANDOlYTJT7N5jlRC3zfzVA' &&
-  //             holoDatas2.channel.id !== 'UChSvpZYRPh0FvG4SJGSga3g' &&
-  //             holoDatas2.channel.id !== 'UCwL7dgTxKo8Y4RFIKWaf8gA' &&
-  //             holoDatas2.channel.id !== 'UC6t3-_N8A6ME1JShZHHqOMw' &&
-  //             holoDatas2.channel.id !== '' &&
-  //             holoDatas2.channel.id !== 'UCc88OV45ICgHbn3ZqLLb52w' &&
-  //             holoDatas2.channel.id !== 'UCgRqGV1gBf2Esxh0Tz1vxzw' &&
-  //             holoDatas2.channel.id !== 'UCkT1u65YS49ca_LsFwcTakw' &&
-  //             holoDatas2.channel.id !== 'UCdfMHxjcCc2HSd9qFvfJgjg' &&
-  //             holoDatas2.channel.id !== '' &&
-  //             holoDatas2.channel.id !== 'UCWsfcksUUpoEvhia0_ut0bA') ? (holoDatas2.channel.id) : null )
-  //     );
-  //   };
-  //     update()
-  // },[])
-  // console.log(mapUrl)
-  
-  // const a = () => {
-  //   (mapUrl.map((mapUrls2: any) => (
-  //     console.log(mapUrls2)
-  //   )))
-  // };
-  // a()
-
-  // const initialState = [
-  //   "baseboll",
-  //   "soccer",
-  //   "basketball",
-  //   "volleyball",
-  //   "tennis"
-  // ];
-
-  // const [sports, setSports] = useState(initialState);
-  // useEffect (() => {
-
-  //   const updateSportsList = () => {
-  //     setSports(
-  //       sports.map((sport, index) => (index === 2 ? "badminton" : sport))
-  //     );
-  //   };
-  //   updateSportsList()
-  // },[])
-  // console.log(sports)
-
-  // useEffect(() => {
-  //   (async () => {
-  //     const url = await getYtThumbnail(
-  //       mapUrl.map(
-  //         (mapUrls: any) => (mapUrls.channel.id)))
-  //   })
-  // },[])
 
 
   return (
@@ -195,108 +113,11 @@ const Main: React.VFC = () => {
                 <div className="flex-1">
                   <div className='flex justify-around'>
                     <ul className='w-[500px] flex flex-col items-center'>
-                      { [1].map(() => <li className="px-[10px] flex flex-wrap items-center rounded-full">
-                        {holoData.map(
-                          (holoDatas: any) =>  {
-                            return (holoDatas.channel.org === "Hololive" &&
-                                    holoDatas.status === "live" &&
-                                    holoDatas.channel.id !== 'UCKeAhJvy8zgXWbh9duVjIaQ' &&
-                                    holoDatas.channel.id !== 'UCZgOv3YDEs-ZnZWDYVwJdmA' &&
-                                    holoDatas.channel.id !== 'UC9mf_ZVpouoILRY9NUIaK-w' &&
-                                    holoDatas.channel.id !== 'UCNVEsYbiZjH5QLmGeSgTSzg' &&
-                                    holoDatas.channel.id !== 'UCGNI4MENvnsymYjKiZwv9eg' &&
-                                    holoDatas.channel.id !== 'UCANDOlYTJT7N5jlRC3zfzVA' &&
-                                    holoDatas.channel.id !== 'UChSvpZYRPh0FvG4SJGSga3g' &&
-                                    holoDatas.channel.id !== 'UCwL7dgTxKo8Y4RFIKWaf8gA' &&
-                                    holoDatas.channel.id !== 'UC6t3-_N8A6ME1JShZHHqOMw' &&
-                                    holoDatas.channel.id !== '' &&
-                                    holoDatas.channel.id !== 'UCc88OV45ICgHbn3ZqLLb52w' &&
-                                    holoDatas.channel.id !== 'UCgRqGV1gBf2Esxh0Tz1vxzw' &&
-                                    holoDatas.channel.id !== 'UCkT1u65YS49ca_LsFwcTakw' &&
-                                    holoDatas.channel.id !== 'UCdfMHxjcCc2HSd9qFvfJgjg' &&
-                                    holoDatas.channel.id !== '' &&
-                                    holoDatas.channel.id !== 'UCWsfcksUUpoEvhia0_ut0bA') ? (
-                                      <img
-                                        onClick={() => window.open(`https://www.youtube.com/watch?v=${holoDatas.id}`)}
-                                        key={holoDatas.id}
-                                        className={`${(!active ? style.panel : style.panel2)}
-                                          ${(!active3 ? style.panel : style.panel3_light)}`}
-                                        src={holoDatas.channel.id === 'UCvaTdHTWBGv3MKj3KVqJVCw' ? youtube_jpeg + holoDatas.id + youtube_jpeg_size.midium : youtube_jpeg + holoDatas.id + youtube_jpeg_size.large} />
-                            ) : null
-                          }
-                        )}
-                      </li>
-                               )}
-                      <h2 className='mt-3 mb-6 text-white opacity-20 hover:opacity-80'>放送中</h2>
-
-
-                      { [1].map(() => <li className="px-[10px] flex flex-wrap items-center rounded-full">
-                        {holoData.map(
-                          (holoDatas: any) =>  {
-                            return (holoDatas.channel.org === "Hololive" &&
-                                    holoDatas.status === "upcoming" &&
-                                    holoDatas.channel.id !== 'UCKeAhJvy8zgXWbh9duVjIaQ' &&
-                                    holoDatas.channel.id !== 'UCZgOv3YDEs-ZnZWDYVwJdmA' &&
-                                    holoDatas.channel.id !== 'UC9mf_ZVpouoILRY9NUIaK-w' &&
-                                    holoDatas.channel.id !== 'UCNVEsYbiZjH5QLmGeSgTSzg' &&
-                                    holoDatas.channel.id !== 'UCGNI4MENvnsymYjKiZwv9eg' &&
-                                    holoDatas.channel.id !== 'UCANDOlYTJT7N5jlRC3zfzVA' &&
-                                    holoDatas.channel.id !== 'UChSvpZYRPh0FvG4SJGSga3g' &&
-                                    holoDatas.channel.id !== 'UCwL7dgTxKo8Y4RFIKWaf8gA' &&
-                                    holoDatas.channel.id !== 'UC6t3-_N8A6ME1JShZHHqOMw' &&
-                                    holoDatas.channel.id !== '' &&
-                                    holoDatas.channel.id !== 'UCc88OV45ICgHbn3ZqLLb52w' &&
-                                    holoDatas.channel.id !== 'UCgRqGV1gBf2Esxh0Tz1vxzw' &&
-                                    holoDatas.channel.id !== 'UCkT1u65YS49ca_LsFwcTakw' &&
-                                    holoDatas.channel.id !== 'UCdfMHxjcCc2HSd9qFvfJgjg' &&
-                                    holoDatas.channel.id !== '' &&
-                                    holoDatas.channel.id !== 'UCWsfcksUUpoEvhia0_ut0bA') ? (
-                                      <img
-                                        onClick={() => window.open(`https://www.youtube.com/watch?v=${holoDatas.id}`)}
-                                        key={holoDatas.id}
-                                        className='hover:shadow-[0_0px_0px_1px_#fff] flex-1 object-cover cursor-pointer opacity-20 mr-1 mt-1 hover:opacity-80 bg-slate-100 hover:blur-none w-[100px] h-[70px] rounded-[10px]'
-                                        // src={thumbnail} />
-                                        src={holoDatas.channel.id === 'UCvaTdHTWBGv3MKj3KVqJVCw' ? youtube_jpeg + holoDatas.id + youtube_jpeg_size.midium : youtube_jpeg + holoDatas.id + youtube_jpeg_size.large} />
-                            ) : null
-                          }
-                        )}
-                      </li>
-                               )}
-                      <h2 className='mt-3 text-white opacity-20 hover:opacity-80'>放送予定</h2>
+                    <LivePanel holoData={holoData} active={active} active3={active3}/>
+                      <UpcomingPanel holoData={holoData} active={active} active3={active3}/>
                     </ul>
                     <div className='pr-2'>
-                      <div className='flex flex-wrap w-[80px]'>
-                        <button type='button' className='nav-button' onClick={classToggle}></button>
-                        <button type='button' className='nav-button' onClick={classToggle}></button>
-                        <button type='button' className='nav-button' onClick={classToggle}></button>
-                        <button type='button' className='nav-button' onClick={classToggle}></button>
-                        <button type='button' className='nav-button' onClick={classToggle}></button>
-                        <button type='button' className='nav-button' onClick={classToggle}></button>
-                        <button type='button' className='nav-button' onClick={classToggle}></button>
-                        <button type='button' className='nav-button' onClick={classToggle}></button>
-                        <button type='button' className='nav-button' onClick={classToggle}></button>
-                        <button type='button' className='nav-button' onClick={classToggle}></button>
-                        <button type='button' className='nav-button' onClick={classToggle}></button>
-                        <button type='button' className='nav-button' onClick={classToggle}></button>
-                        <button type='button' className='nav-button' onClick={classToggle}></button>
-                        <button type='button' className='nav-button' onClick={classToggle}></button>
-                        <button type='button' className='nav-button' onClick={classToggle}></button>
-                        <button type='button' className='nav-button' onClick={classToggle}></button>
-                        <button type='button' className='nav-button' onClick={classToggle}></button>
-                        <button type='button' className='nav-button' onClick={classToggle}></button>
-                        <button type='button' className='nav-button' onClick={classToggle}></button>
-                        <button type='button' className='nav-button' onClick={classToggle}></button>
-                        <button type='button' className='nav-button' onClick={classToggle}></button>
-                        <button type='button' className='nav-button' onClick={classToggle}></button>
-                        <button type='button' className='nav-button' onClick={classToggle}></button>
-                        <button type='button' className='nav-button' onClick={classToggle}></button>
-                        <button type='button' className='nav-button2' onClick={classToggle}></button>
-                        <button type='button' className='nav-button2' onClick={classToggle}></button>
-                        <button type='button' className='nav-button2' onClick={classToggle}></button>
-                        <button type='button' className='nav-button2' onClick={classToggle}></button>
-                        <button type='button' className='nav-button2' onClick={classToggle}></button>
-                        <button type='button' className='nav-button2' onClick={classToggle}></button>
-                      </div>
+                    <PanelButton classToggle={classToggle}/>
                       <div className='flex flex-col w-[10px] h-[140px] opacity-80 mt-[10px]'>
                         <Button className='mb-1'variant="outlined" size="small" onClick={classToggle2}>
                           &#x2699;
@@ -327,7 +148,6 @@ const Main: React.VFC = () => {
           <div className='flex items-end'>
             <div className='flex items-end'>
               <Image className="" src='/download-2.webp' width={50} height={50}/>
-
               <div className='p-2 text-white rounded-full w-[80px] bg-[#111111aa] sm:text-[12px] text-[0.5rem]'><TypeWriter data={typeWriter} /></div>
             </div>
 <HoloButton classToggle2={classToggle2}/>
