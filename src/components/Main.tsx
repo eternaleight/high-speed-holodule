@@ -322,7 +322,7 @@ const Main: React.VFC = () => {
         </div>
         <div onClick={classToggle2} className={`${active2 ? 'hover-text2' : 'none' }`}>
           <div onClick={classToggle2} className="cursor-pointer text2 ml-[88vw]" >×</div>
-          <p className="text2">💭</p>
+          <p className="text2">　💭</p>
           <p className="text2"></p>
           <div className='flex items-end'>
             <div className='flex items-end'>
