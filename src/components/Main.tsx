@@ -25,8 +25,7 @@ const Main: React.VFC = () => {
   const classToggle3 = () => {
     setActive3(!active3)
   }
-  // const typeWriter = ["ぼたんをぜ~~っったいにおすんじゃ~ないよ~~そこのクマ~~!", "こんにちは!"];
-  const typeWriter = ["ディングポットよ~ここはい~~ったいどこじゃ~？", "こんにちは!","イ〜カンっっポ〜カン!"];
+  const typeWriter = ["ぼたんをぜ~~っったいにおすんじゃ~ないよ~~そこのクマ~~!", "こんにちは!"];
 
   const style = {
     panel: `hover:shadow-[0_0px_0px_1px_#f00] flex-1 object-cover cursor-pointer opacity-[0.2] mr-1 mt-1 hover:opacity-[0.8] bg-slate-100 hover:blur-none w-[100px] h-[70px] rounded-[10px]`,
@@ -86,8 +85,7 @@ const Main: React.VFC = () => {
   },[ytUrl])
   // (holoDatas.channel.id === "UCoztvTULBYd3WmStqYeoHcA" | holoDatas.channel.id === "UC_4tXjqecqox5Uc05ncxpxg"
 
-  // const [mapUrl, setMapUrl] = useState([])
-  // useEffect(() => {
+
   //   const update = () => {
   //     setMapUrl(
   //       holoData.filter(
@@ -115,6 +113,13 @@ const Main: React.VFC = () => {
   //     update()
   // },[])
   // console.log(mapUrl)
+  
+  // const a = () => {
+  //   (mapUrl.map((mapUrls2: any) => (
+  //     console.log(mapUrls2)
+  //   )))
+  // };
+  // a()
 
   // const initialState = [
   //   "baseboll",
@@ -325,7 +330,9 @@ const Main: React.VFC = () => {
 
               <div className='p-2 text-white rounded-full bg-[#111111aa] sm:text-[12px] text-[0.5rem]'><TypeWriter data={typeWriter} /></div>
             </div>
-            <HoloButton classToggle2={classToggle2}/>
+            <div className='flex -1'>
+<HoloButton classToggle2={classToggle2}/>
+            </div>
           </div>
         </div>
       </section>

@@ -7,7 +7,7 @@ type Props = {
 
 const HoloButton: React.VFC<Props> = ({classToggle2}) => {
   return(
-    <div className='flex flex-wrap opacity-90  w-[290px]'>
+    <div className='flex flex-wrap opacity-90  w-[250px]'>
       <Button className='mx-1 mb-1' variant="outlined" size="small" onClick={classToggle2}>
         🛸💜
       </Button>
