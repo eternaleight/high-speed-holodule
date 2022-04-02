@@ -146,11 +146,13 @@ const Main: React.VFC = () => {
           <p className="text2">　💭</p>
           <p className="text2"></p>
           <div className='flex items-end'>
+            <div className='flex justify-center flex-1'>
             <div className='flex items-end'>
               <Image className="" src='/download-2.webp' width={50} height={50}/>
-              <div className='p-2 text-white rounded-full w-[80px] bg-[#111111aa] sm:text-[12px] text-[0.5rem]'><TypeWriter data={typeWriter} /></div>
+              <div className='p-2 text-white rounded-full md:w-[auto] mr-3 w-[80px] bg-[#111111aa] sm:text-[12px] text-[0.5rem]'><TypeWriter data={typeWriter} /></div>
             </div>
 <HoloButton classToggle2={classToggle2}/>
+</div>
           </div>
         </div>
       </section>
