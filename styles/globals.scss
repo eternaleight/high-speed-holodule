@@ -1,9 +1,24 @@
 @import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
 
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+$media-md: 640px;
+
+@media screen and (max-width: $media-md) {
+  .hover .hover-text .text1 {
+    font-size: 10px;
+  }
+  .hover2 .hover-text2 .text2 {
+    font-size: 10px;
+  }
+}
+
+// @include md {
+//   font-size: 10px;
+// }
 
 body {
   background: #112;
@@ -16,15 +31,14 @@ body {
   height: 2px;
   color: #fff;
   cursor: default;
-}
-
-.nav-button::before {
-  content: '';
-  display: block;
-  width: 40px;
-  height: 2px;
-  background-color: #2e5180;
-  cursor: default;
+  &::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 2px;
+    background-color: #2e5180;
+    cursor: default;
+  }
 }
 
 .nav-button2 {
@@ -34,15 +48,14 @@ body {
   height: 2px;
   color: #fff;
   cursor: default;
-}
-
-.nav-button2::before {
-  content: '';
-  display: block;
-  width: 40px;
-  height: 2px;
-  background-color: #888;
-  cursor: default;
+  &::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 2px;
+    background-color: #888;
+    cursor: default;
+  }
 } 
 
 .hover {
@@ -50,61 +63,60 @@ body {
   width: 100vw;
   height: 12vh;
   overflow: hidden;
-}
-.hover .hover-img {
-  margin: 0;
-  padding: 0;
-}
-.hover-img img {
-  width: 100%;
-  height: 100%;
-}
-.hover .hover-text {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  color: #fff;
-  background-color: rgba(0,0,0,0.6);
-  /*透明にして表示させない*/
-  opacity: 0;
-  /*ホバーの動き方*/
-  transition: 0.3s ease-in-out;
-}
-.hover .hover-text .text1 {
-  font-size: 14px;
-  padding: 0 20px 0px;
-}
-@media screen and (max-width: 640px) {
-  .hover .hover-text .text1 {
-    font-size: 10px;
+  &.hover-img {
+    margin: 0;
+    padding: 0; 
+    &img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &.hover-text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    color: #fff;
+    background-color: rgba(0,0,0,0.6);
+    /*透明にして表示させない*/
+    opacity: 0;
+    /*ホバーの動き方*/
+    transition: 0.3s ease-in-out;
+    &.text1 {
+      font-size: 14px;
+      padding: 0 20px 0px;
+    }
+  }
+  &:hover .hover-text {
+    /*不透明にして表示*/
+    opacity: 1;
+    /*padding-topで上からスライド*/
+    padding-top: 1vh;
   }
 }
-/*ホバーエフェクト*/
-.hover:hover .hover-text {
-  /*不透明にして表示*/
-  opacity: 1;
-  /*padding-topで上からスライド*/
-  padding-top: 1vh;
-}
-
-
-
 
 .hover2 {
   position: absolute;
   width: 100vw;
   height: 10vh;
+
+  &.hover-img2 {
+    margin: 0;
+    padding: 0;
+  }
+  &.hover-text2 .text2 {
+    font-size: 12px;
+    padding: 0 20px 0px;
+  }
 }
-.hover2 .hover-img2 {
-  margin: 0;
-  padding: 0;
-}
+
+
 .hover-img2 img {
   width: 100%;
   height: 100%;
 }
+
 .hover2 .hover-text2 {
   z-index: 1;
   position: fixed;
@@ -119,15 +131,6 @@ body {
   opacity: 1;
   /*ホバーの動き方*/
   transition: 0.3s ease-in-out;
-}
-.hover2 .hover-text2 .text2 {
-  font-size: 12px;
-  padding: 0 20px 0px;
-}
-@media screen and (max-width: 640px) {
-  .hover2 .hover-text2 .text2 {
-    font-size: 10px;
-  }
 }
 
 .none {

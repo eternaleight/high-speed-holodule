@@ -4,7 +4,7 @@ import Button from '@mui/material/Button';
 import Image from "next/image";
 import HoloButton from "./HoloButton";
 import TypeWriter from "./Typewriter"
-import { getYtThumbnail } from "./GetYtThumbnail";
+// import { getYtThumbnail } from "./GetYtThumbnail";
 
 const Main: React.VFC = () => {
   const [holoData, setHoloData] = useState<any>([])
@@ -13,7 +13,7 @@ const Main: React.VFC = () => {
   const [active3, setActive3] = useState<boolean>(false)
   const [thumbnail, setThumbnail] = useState<string>()
 
-  console.log(getYtThumbnail('sqEd2W6TEgk'))
+  // console.log(getYtThumbnail('sqEd2W6TEgk'))
   const classToggle = () => {
     setActive(!active)
   }
@@ -75,14 +75,14 @@ const Main: React.VFC = () => {
 
 
 
-  let ytUrl = 'sqEd2W6TEgk'
-  useEffect(() => {
-    async function th() {
-      const th2 = await getYtThumbnail(ytUrl)
-      setThumbnail(th2)
-      console.log(th2)
-    } th()
-  },[ytUrl])
+  // let ytUrl = 'sqEd2W6TEgk'
+  // useEffect(() => {
+  //   async function th() {
+  //     const th2 = await getYtThumbnail(ytUrl)
+  //     setThumbnail(th2)
+  //     console.log(th2)
+  //   } th()
+  // },[ytUrl])
   // (holoDatas.channel.id === "UCoztvTULBYd3WmStqYeoHcA" | holoDatas.channel.id === "UC_4tXjqecqox5Uc05ncxpxg"
 
 
@@ -330,9 +330,7 @@ const Main: React.VFC = () => {
 
               <div className='p-2 text-white rounded-full bg-[#111111aa] sm:text-[12px] text-[0.5rem]'><TypeWriter data={typeWriter} /></div>
             </div>
-            <div className='flex -1'>
 <HoloButton classToggle2={classToggle2}/>
-            </div>
           </div>
         </div>
       </section>
