@@ -26,7 +26,8 @@ const Live: React.VFC<Props> = (props) => {
                       { [1].map(() => <li className="px-[10px] flex flex-wrap items-center rounded-full">
                         {props.holoData.map(
                           (holoDatas: any) =>  {
-                            return (holoDatas.channel.org === "Hololive" &&
+                            return (
+                              holoDatas.channel.org === "Hololive" &&
                                     holoDatas.status === "live" &&
                                     holoDatas.channel.id !== 'UCKeAhJvy8zgXWbh9duVjIaQ' &&
                                     holoDatas.channel.id !== 'UCZgOv3YDEs-ZnZWDYVwJdmA' &&

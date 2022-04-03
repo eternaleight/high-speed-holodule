@@ -73,33 +73,34 @@ const Main: React.VFC = () => {
       <div className='flex flex-wrap w-[100vw]'>
         {holoData.map (
           (holoDatas: any) =>  {
-            return (holoDatas.channel.org === "Hololive" &&
-                    holoDatas.status === "live" &&
-                    holoDatas.channel.id !== 'UCKeAhJvy8zgXWbh9duVjIaQ' &&
-                    holoDatas.channel.id !== 'UCZgOv3YDEs-ZnZWDYVwJdmA' &&
-                    holoDatas.channel.id !== 'UC9mf_ZVpouoILRY9NUIaK-w' &&
-                    holoDatas.channel.id !== 'UCNVEsYbiZjH5QLmGeSgTSzg' &&
-                    holoDatas.channel.id !== 'UCGNI4MENvnsymYjKiZwv9eg' &&
-                    holoDatas.channel.id !== 'UCANDOlYTJT7N5jlRC3zfzVA' &&
-                    holoDatas.channel.id !== 'UChSvpZYRPh0FvG4SJGSga3g' &&
-                    holoDatas.channel.id !== 'UCwL7dgTxKo8Y4RFIKWaf8gA' &&
-                    holoDatas.channel.id !== 'UC6t3-_N8A6ME1JShZHHqOMw' &&
-                    holoDatas.channel.id !== '' &&
-                    holoDatas.channel.id !== 'UCc88OV45ICgHbn3ZqLLb52w' &&
-                    holoDatas.channel.id !== 'UCgRqGV1gBf2Esxh0Tz1vxzw' &&
-                    holoDatas.channel.id !== 'UCkT1u65YS49ca_LsFwcTakw' &&
-                    holoDatas.channel.id !== 'UCdfMHxjcCc2HSd9qFvfJgjg' &&
-                    holoDatas.channel.id !== '' &&
-                    holoDatas.channel.id !== 'UCWsfcksUUpoEvhia0_ut0bA') ? (
-                      <div>
-                        <img
-                          key={holoDatas.id}
-                          onClick={() => window.open(`${holoVideo}${holoDatas.id}`)}
-                          className='cursor-pointer w-[100px]' 
-                          src={holoDatas.channel.photo} />
-                        <p className='w-[300px] text-[14px] text-white'>{holoDatas.title}</p>
-                      </div>
-            ) : null
+            return (
+              holoDatas.channel.org === "Hololive" &&
+                holoDatas.status === "live" &&
+                holoDatas.channel.id !== 'UCKeAhJvy8zgXWbh9duVjIaQ' &&
+                holoDatas.channel.id !== 'UCZgOv3YDEs-ZnZWDYVwJdmA' &&
+                holoDatas.channel.id !== 'UC9mf_ZVpouoILRY9NUIaK-w' &&
+                holoDatas.channel.id !== 'UCNVEsYbiZjH5QLmGeSgTSzg' &&
+                holoDatas.channel.id !== 'UCGNI4MENvnsymYjKiZwv9eg' &&
+                holoDatas.channel.id !== 'UCANDOlYTJT7N5jlRC3zfzVA' &&
+                holoDatas.channel.id !== 'UChSvpZYRPh0FvG4SJGSga3g' &&
+                holoDatas.channel.id !== 'UCwL7dgTxKo8Y4RFIKWaf8gA' &&
+                holoDatas.channel.id !== 'UC6t3-_N8A6ME1JShZHHqOMw' &&
+                holoDatas.channel.id !== '' &&
+                holoDatas.channel.id !== 'UCc88OV45ICgHbn3ZqLLb52w' &&
+                holoDatas.channel.id !== 'UCgRqGV1gBf2Esxh0Tz1vxzw' &&
+                holoDatas.channel.id !== 'UCkT1u65YS49ca_LsFwcTakw' &&
+                holoDatas.channel.id !== 'UCdfMHxjcCc2HSd9qFvfJgjg' &&
+                holoDatas.channel.id !== '' &&
+                holoDatas.channel.id !== 'UCWsfcksUUpoEvhia0_ut0bA') ? (
+                  <div>
+                    <img
+                      key={holoDatas.id}
+                      onClick={() => window.open(`${holoVideo}${holoDatas.id}`)}
+                      className='cursor-pointer w-[100px]' 
+                      src={holoDatas.channel.photo} />
+                    <p className='w-[300px] text-[14px] text-white'>{holoDatas.title}</p>
+                  </div>
+              ) : null
           }
         )}
       </div>
@@ -113,11 +114,11 @@ const Main: React.VFC = () => {
                 <div className="flex-1">
                   <div className='flex justify-around'>
                     <ul className='w-[500px] flex flex-col items-center'>
-                    <LivePanel holoData={holoData} active={active} active3={active3}/>
+                      <LivePanel holoData={holoData} active={active} active3={active3}/>
                       <UpcomingPanel holoData={holoData} active={active} active3={active3}/>
                     </ul>
                     <div className='pr-2'>
-                    <PanelButton classToggle={classToggle}/>
+                      <PanelButton classToggle={classToggle}/>
                       <div className='flex flex-col w-[10px] h-[140px] opacity-80 mt-[10px]'>
                         <Button className='mb-1'variant="outlined" size="small" onClick={classToggle2}>
                           &#x2699;
@@ -147,12 +148,12 @@ const Main: React.VFC = () => {
           <p className="text2"></p>
           <div className='flex items-end'>
             <div className='flex justify-center flex-1'>
-            <div className='flex items-end'>
-              <Image className="" src='/download-2.webp' width={50} height={50}/>
-              <div className='p-2 text-white rounded-full md:w-[auto] mr-3 w-[80px] bg-[#111111aa] sm:text-[12px] text-[0.5rem]'><TypeWriter data={typeWriter} /></div>
+              <div className='flex items-end'>
+                <Image className="" src='/download-2.webp' width={50} height={50}/>
+                <div className='p-2 text-white rounded-full md:w-[auto] mr-3 w-[80px] bg-[#111111aa] sm:text-[12px] text-[0.5rem]'><TypeWriter data={typeWriter} /></div>
+              </div>
+              <HoloButton classToggle2={classToggle2}/>
             </div>
-<HoloButton classToggle2={classToggle2}/>
-</div>
           </div>
         </div>
       </section>
@@ -160,7 +161,5 @@ const Main: React.VFC = () => {
   )
 }
 export default Main
-
-
 
 
