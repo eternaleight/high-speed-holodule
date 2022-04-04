@@ -40,12 +40,15 @@ const UpcomingPanel: React.VFC<Props> = React.memo((props) => {
                                 holoDatas.channel.id !== 'UCdfMHxjcCc2HSd9qFvfJgjg' &&
                                 holoDatas.channel.id !== '' &&
                                 holoDatas.channel.id !== 'UCWsfcksUUpoEvhia0_ut0bA') ? (
-                                  <img
-                                    onClick={() => window.open(`https://www.youtube.com/watch?v=${holoDatas.id}`)}
-                                    key={holoDatas.id}
-                                    className='hover:shadow-[0_0px_0px_1px_#fff] flex-1 object-cover cursor-pointer opacity-20 mr-1 mt-1 hover:opacity-80 bg-slate-100 hover:blur-none w-[100px] h-[70px] rounded-[10px]'
-                                    // src={thumbnail} />
-                                    src={holoDatas.channel.id === 'UCvaTdHTWBGv3MKj3KVqJVCw' ? youtube_jpeg + holoDatas.id + youtube_jpeg_size.midium : youtube_jpeg + holoDatas.id + youtube_jpeg_size.large} />
+                                  <div>
+                                    <img
+                                      onClick={() => window.open(`https://www.youtube.com/watch?v=${holoDatas.id}`)}
+                                      key={holoDatas.id}
+                                      className='hover:shadow-[0_0px_0px_1px_#fff] flex-1 object-cover cursor-pointer opacity-20 mr-1 mt-1 hover:opacity-80 bg-slate-100 hover:blur-none w-[100px] h-[70px] rounded-[10px]'
+                                      // src={thumbnail} />
+                                      src={holoDatas.channel.id === 'UCvaTdHTWBGv3MKj3KVqJVCw' ? youtube_jpeg + holoDatas.id + youtube_jpeg_size.midium : youtube_jpeg + holoDatas.id + youtube_jpeg_size.large} />
+                                    <p className='text-white opacity-90'>{parseInt(holoDatas.start_scheduled.slice(11,-8)) +9 < 25 ? parseInt(holoDatas.start_scheduled.slice(11,-8)) +9 + ':00' : parseInt(holoDatas.start_scheduled.slice(11,-8)) -15 + ':00'}</p>
+                                  </div>
                               ) : null
                           }
                         )}

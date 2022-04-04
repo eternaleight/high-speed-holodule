@@ -1,4 +1,4 @@
-import {useCallback, useEffect, useState} from "react"
+import {useReducer, useCallback, useEffect, useState} from "react"
 import Link from "next/link"
 import Button from '@mui/material/Button';
 import Image from "next/image";
@@ -13,6 +13,22 @@ const Main: React.VFC = () => {
   const [active, setActive] = useState<boolean>(false)
   const [active2, setActive2] = useState<boolean>(false)
   const [active3, setActive3] = useState<boolean>(false)
+  
+
+  const reducer = (state: any, action: any) => {
+    switch (action.type) {
+      case 'ACTIVE':
+        return {toggle: setActive(!active)}
+      case 'ACTIVE2':
+        return {toggle: setActive(!active2)}
+      case 'ACTIVE3':
+        return {toggle: setActive(!active3)}
+      default:
+        return state;
+    }
+  }
+  
+  const [state, dispatch] = useReducer(reducer, {toggle: false})
 
   const classToggle = useCallback(() => {
     setActive(!active)
@@ -63,7 +79,7 @@ const Main: React.VFC = () => {
       const res = await fetch(holoUrl)
       const users = await res.json()
       setHoloData(users)
-      // console.log(users)
+       console.log(users)
       return res
     } HoloApi()
   },[holoUrl])
