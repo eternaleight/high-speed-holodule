@@ -158,3 +158,10 @@ body {
   transition: 1.2s ease-in-out;
 }
 
+.opa {
+  width: 43px;
+  opacity: 0.3;
+  &:hover {
+    opacity: 0.9;
+  }
+}

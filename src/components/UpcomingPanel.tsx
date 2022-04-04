@@ -47,7 +47,7 @@ const UpcomingPanel: React.VFC<Props> = React.memo((props) => {
                                       className='hover:shadow-[0_0px_0px_1px_#fff] flex-1 object-cover cursor-pointer opacity-20 mr-1 mt-1 hover:opacity-80 bg-slate-100 hover:blur-none w-[100px] h-[70px] rounded-[10px]'
                                       // src={thumbnail} />
                                       src={holoDatas.channel.id === 'UCvaTdHTWBGv3MKj3KVqJVCw' ? youtube_jpeg + holoDatas.id + youtube_jpeg_size.midium : youtube_jpeg + holoDatas.id + youtube_jpeg_size.large} />
-                                    <p className='text-white opacity-90'>{parseInt(holoDatas.start_scheduled.slice(11,-8)) +9 < 25 ? parseInt(holoDatas.start_scheduled.slice(11,-8)) +9 + ':00' : parseInt(holoDatas.start_scheduled.slice(11,-8)) -15 + ':00'}</p>
+                                    <p className='text-slate-300 opa'>{parseInt(holoDatas.start_scheduled.slice(11,-8)) +9 < 25 ? parseInt(holoDatas.start_scheduled.slice(11,-8)) +9 + ':00' : parseInt(holoDatas.start_scheduled.slice(11,-8)) -15 + ':00'}</p>
                                   </div>
                               ) : null
                           }
