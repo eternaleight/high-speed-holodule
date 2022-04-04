@@ -1,11 +1,12 @@
+import React from "react"
 
 type Props = {
   active: boolean,
   active3: boolean,
-  holoData: any[],
+  holoData: number[],
 }
 
-const UpcomingPanel: React.VFC<Props> = (props) => {
+const UpcomingPanel: React.VFC<Props> = React.memo((props) => {
 
   const youtube_jpeg_size = {
     large: "/maxresdefault.jpg",
@@ -53,5 +54,5 @@ const UpcomingPanel: React.VFC<Props> = (props) => {
       <h2 className='mt-3 mb-6 text-white opacity-20 hover:opacity-80'>放送予定</h2>
     </div>
   )
-}
+})
 export default UpcomingPanel

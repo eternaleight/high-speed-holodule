@@ -1,4 +1,4 @@
-import {useEffect, useState} from "react"
+import {useCallback, useEffect, useState} from "react"
 import Link from "next/link"
 import Button from '@mui/material/Button';
 import Image from "next/image";
@@ -9,22 +9,23 @@ import UpcomingPanel from "./UpcomingPanel";
 import PanelButton from "./Button"
 
 const Main: React.VFC = () => {
-  const [holoData, setHoloData] = useState<any[]>([])
+  const [holoData, setHoloData] = useState<number[]>([])
   const [active, setActive] = useState<boolean>(false)
   const [active2, setActive2] = useState<boolean>(false)
   const [active3, setActive3] = useState<boolean>(false)
 
-  const classToggle = () => {
+  const classToggle = useCallback(() => {
     setActive(!active)
-  }
+  },[active])
 
-  const classToggle2 = () => {
+  const classToggle2 = useCallback(() => {
     setActive2(!active2)
-  }
+  },[active2])
 
-  const classToggle3 = () => {
+  const classToggle3 = useCallback(() => {
     setActive3(!active3)
-  }
+  },[active3])
+
   const typeWriter = ["ぼたんをぜ~~っったいにおすんじゃ~ないよ~~そこのクマ~~!", "こんにちは!"];
 
   const youtube_jpeg_size = {

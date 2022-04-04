@@ -1,11 +1,12 @@
+import React from "react"
 
 type Props = {
   active: boolean,
   active3: boolean,
-  holoData: any[],
+  holoData: number[],
 }
 
-const Live: React.VFC<Props> = (props) => {
+const Live: React.VFC<Props> = React.memo((props) => {
 
   const style = {
     panel: `hover:shadow-[0_0px_0px_1px_#f00] flex-1 object-cover cursor-pointer opacity-[0.2] mr-1 mt-1 hover:opacity-[0.8] bg-slate-100 hover:blur-none w-[100px] h-[70px] rounded-[10px]`,
@@ -59,5 +60,5 @@ const Live: React.VFC<Props> = (props) => {
       <h2 className='mt-3 mb-6 text-white opacity-20 hover:opacity-80'>放送中</h2>
     </div>
   )
-}
+})
 export default Live

@@ -5,7 +5,7 @@ type Props = {
   classToggle2: VoidFunction
 }
 
-const HoloButton: React.VFC<Props> = ({classToggle2}) => {
+const HoloButton: React.VFC<Props> = React.memo(({classToggle2}) => {
   return(
     <div className='flex flex-wrap opacity-90  w-[250px]'>
       <Button className='mx-1 mb-1' variant="outlined" size="small" onClick={classToggle2}>
@@ -118,6 +118,6 @@ const HoloButton: React.VFC<Props> = ({classToggle2}) => {
       </Button>
     </div>
   )
-}
+})
 
 export default HoloButton
