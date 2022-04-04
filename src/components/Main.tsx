@@ -13,7 +13,7 @@ const Main: React.VFC = () => {
   const [active, setActive] = useState<boolean>(false)
   const [active2, setActive2] = useState<boolean>(false)
   const [active3, setActive3] = useState<boolean>(false)
-  
+  const [holoData2, setHoloData2] = useState<number[]>([])
 
   const reducer = (state: any, action: any) => {
     switch (action.type) {
@@ -73,16 +73,27 @@ const Main: React.VFC = () => {
   const youtube_id = youtube.slice(32)
   const holoVideo = 'https://www.youtube.com/watch?v='
   const holoUrl = 'https://holodex.net/api/v2/live/'
+  const holoUrl2 = 'https://api.holotools.app/v1/videos/'
 
   useEffect(() => {
     async function HoloApi() {
       const res = await fetch(holoUrl)
       const users = await res.json()
       setHoloData(users)
-       console.log(users)
+       // console.log(users)
       return res
     } HoloApi()
   },[holoUrl])
+
+  useEffect(() => {
+   ;(async () => {
+      const res = await fetch(holoUrl2)
+      const users = await res.json()
+      setHoloData2(users)
+     console.log(users)
+      return res
+    })()
+  },[holoUrl2])
 
 
   return (
