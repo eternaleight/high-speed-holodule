@@ -6,7 +6,7 @@ type Props = {
   holoData: number[],
 }
 
-const UpcomingPanel: React.VFC<Props> = React.memo((props) => {
+const UpcomingPanel: React.VFC<Props> = ((props) => {
 
   const youtube_jpeg_size = {
     large: "/maxresdefault.jpg",

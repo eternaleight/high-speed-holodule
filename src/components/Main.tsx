@@ -14,6 +14,8 @@ const Main: React.VFC = () => {
   const [active2, setActive2] = useState<boolean>(false)
   const [active3, setActive3] = useState<boolean>(false)
   const [holoData2, setHoloData2] = useState<number[]>([])
+  const [active4, setActive4] = useState<number>(0)
+
 
   const reducer = (state: any, action: any) => {
     switch (action.type) {
@@ -23,11 +25,13 @@ const Main: React.VFC = () => {
         return {toggle: setActive(!active2)}
       case 'ACTIVE3':
         return {toggle: setActive(!active3)}
+      case 'ACTIVE4':
+        return {toggle: classToggle4}
       default:
         return state;
     }
   }
-  
+
   const [state, dispatch] = useReducer(reducer, {toggle: false})
 
   const classToggle = useCallback(() => {
@@ -43,6 +47,18 @@ const Main: React.VFC = () => {
   },[active3])
 
   const typeWriter = ["ぼたんをぜ~~っったいにおすんじゃ~ないよ~~そこのクマ~~!", "こんにちは!"];
+
+  const classToggle4 = useCallback(() => {
+    setActive4((prev) => prev + 1)
+    if (active4 > 3) {
+      setActive4((prev2) => prev2 - 4)
+    }
+  },[active4])
+
+
+
+
+
 
   const youtube_jpeg_size = {
     large: "/maxresdefault.jpg",
@@ -80,17 +96,17 @@ const Main: React.VFC = () => {
       const res = await fetch(holoUrl)
       const users = await res.json()
       setHoloData(users)
-       // console.log(users)
+      // console.log(users)
       return res
     } HoloApi()
   },[holoUrl])
 
   useEffect(() => {
-   ;(async () => {
+    ;(async () => {
       const res = await fetch(holoUrl2)
       const users = await res.json()
       setHoloData2(users)
-     console.log(users)
+      console.log(users)
       return res
     })()
   },[holoUrl2])
