@@ -6,7 +6,7 @@ type Props = {
   holoData: number[],
 }
 
-const Live: React.VFC<Props> = React.memo((props) => {
+const Live: React.VFC<Props> = ((props) => {
 
   const style = {
     panel: `hover:shadow-[0_0px_0px_1px_#f00] flex-1 object-cover cursor-pointer opacity-[0.2] mr-1 mt-1 hover:opacity-[0.8] bg-slate-100 hover:blur-none w-[100px] h-[70px] rounded-[10px]`,
