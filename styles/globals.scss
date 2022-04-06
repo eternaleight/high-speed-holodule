@@ -99,7 +99,6 @@ body {
 .hover2 {
   position: absolute;
   width: 100vw;
-  height: 10vh;
 
   &.hover-img2 {
     margin: 0;
@@ -160,8 +159,7 @@ body {
 
 .opa {
   width: 43px;
-  opacity: 0.3;
+  opacity: 0.5;
   &:hover {
-    opacity: 0.9;
   }
 }

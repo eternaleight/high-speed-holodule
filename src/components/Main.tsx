@@ -155,9 +155,9 @@ const Main: React.VFC = () => {
             <ul>
               <li className="pt-[0.25rem] pb-[10px] gap-1">
                 <br />
-                <div className="flex-1">
+                <div className="">
                   <div className='flex justify-around'>
-                    <ul className='w-[500px] flex flex-col items-center'>
+                    <ul className='w-[500px] flex '>
                       <LivePanel holoData={holoData} active={active} active3={active3}/>
                       <UpcomingPanel holoData={holoData} active={active} active3={active3}/>
                     </ul>
