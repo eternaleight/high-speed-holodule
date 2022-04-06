@@ -18,7 +18,7 @@ const UpcomingPanel: React.VFC<Props> = ((props) => {
 
   return (
     <div>
-      <li className="px-[20px] flex flex-wrap items-center rounded-full">
+      <li className="px-[10px] flex flex-wrap items-center rounded-full">
         {props.holoData.map(
           (holoDatas: any) =>  {
             return (
@@ -61,7 +61,7 @@ const UpcomingPanel: React.VFC<Props> = ((props) => {
                   </div>
               ) : null })}
       </li>
-      <h2 className='mt-3 mb-6 text-white opacity-20 hover:opacity-80'>放送予定</h2>
+      <h2 className='mt-3 mb-6 ml-3 text-white opacity-20 hover:opacity-80'>放送予定</h2>
     </div>
   )
 })
