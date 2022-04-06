@@ -51,7 +51,8 @@ const Main: React.VFC = () => {
     setActive5(!active5)
   },[active5])
 
-  const typeWriter = ["ぼたんをぜ~~っったいにおすんじゃ~ないよ~~そこのクマ~~!", "こんにちは!"];
+
+  const typeWriter = ["ボタンを押してLet's カスタマイズ !!","ボタンを選ぶと便利なことが起きます⚡️",]
 
   // const classToggle4 = useCallback(() => {
   //   setActive4((prev) => prev + 1)
@@ -195,13 +196,14 @@ const Main: React.VFC = () => {
           <div className={`${active2 ? 'blur-box' : 'none' }`}></div>
         </div>
         <div onClick={classToggle2} className={`${active2 ? 'hover-text2' : 'none' }`}>
-          <div onClick={classToggle2} className="cursor-pointer text2 ml-[88vw]" >×</div>
-          <p className="text2">　💭</p>
+          <div onClick={classToggle2} className="cursor-pointer text2 text-[1.2vw] ml-[96vw]" >×</div>
+          <p className="text2 text-[8px]">　💭</p>
           <p className="text2"></p>
           <div className='flex items-end'>
             <div className='flex justify-center flex-1'>
               <div className='flex items-end'>
-                <Image className="" src='/download-2.webp' width={50} height={50}/>
+                {/* <Image className="" src='/download-2.webp' width={50} height={50}/> */}
+                <p className='text-[26px] md:mr-1'>💻</p>
                 <div className='p-2 text-white rounded-full md:w-[auto] mr-3 w-[80px] bg-[#111111aa] sm:text-[12px] text-[0.5rem]'><TypeWriter data={typeWriter} /></div>
               </div>
               <HoloButton classToggle2={classToggle2}/>
