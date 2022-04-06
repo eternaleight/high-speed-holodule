@@ -52,7 +52,7 @@ const UpcomingPanel: React.VFC<Props> = ((props) => {
                       src={holoDatas.channel.id === 'UCvaTdHTWBGv3MKj3KVqJVCw' 
                         ? youtube_jpeg + holoDatas.id + youtube_jpeg_size.midium 
                         : youtube_jpeg + holoDatas.id + youtube_jpeg_size.large} />
-                    <p className='text-slate-300 relative text-[0.1vw] opa'>
+                    <p className='text-slate-300 relative text-[1vw] opa'>
                       {parseInt(
                         holoDatas.start_scheduled.slice(11,-8)) +9 < 25 
                           ? parseInt(holoDatas.start_scheduled.slice(11,-8)) +9 + ':00' 
@@ -61,7 +61,7 @@ const UpcomingPanel: React.VFC<Props> = ((props) => {
                   </div>
               ) : null })}
       </li>
-      <h2 className='text-[0.2vw] mt-1 mb-6 ml-[0.7rem] text-white opacity-20 hover:opacity-80'>放送予定</h2>
+      <h2 className='text-[1vw] mt-1 mb-6 ml-[0.7rem] text-white opacity-20 hover:opacity-80'>放送予定</h2>
     </div>
   )
 })
