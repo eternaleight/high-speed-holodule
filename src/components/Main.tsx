@@ -173,10 +173,10 @@ const Main: React.VFC = () => {
                           &#x2699;
                         </Button>
                         <Button className='mb-1' variant="outlined" size="small" onClick={classToggle3}>
-                          ⚡️💡
+                          ⚡️
                         </Button>
                         <Button className='mb-1' variant="outlined" size="small" onClick={classToggle5}>
-                          ⚡️💡: 2
+                          ⚡️: 2
                         </Button>
                       </div>
                       <Link href={youtube}><img className='rounded-[10px] mt-[50px] mr-3 w-[8em] h-[4.8em] md:mt-[100px] md:w-[8em] md:h-[4.8em] hover:cursor-pointer opacity-20 hover:opacity-80 object-cover duration-300' src={`${youtube_jpeg}${youtube_id}${(youtube_id !== 'SIQ3DfHrd60') ? youtube_jpeg_size.large : youtube_jpeg_size.midium}`} /></Link>
