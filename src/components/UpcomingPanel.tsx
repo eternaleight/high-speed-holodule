@@ -4,6 +4,7 @@ type Props = {
   active: boolean,
   active3: boolean,
   holoData: number[],
+  active5: boolean,
 }
 
 const UpcomingPanel: React.VFC<Props> = ((props) => {
@@ -13,6 +14,10 @@ const UpcomingPanel: React.VFC<Props> = ((props) => {
     midium: "/sddefault.jpg"
   };
 
+  const style = {
+    panel: `hover:shadow-[0_0px_0px_1px_#fff] object-cover cursor-pointer
+    opacity-20 hover:opacity-80 bg-slate-100 hover:blur-none rounded-[10px]`,
+  }
 
   const youtube_jpeg = "https://img.youtube.com/vi/"
 
@@ -45,9 +50,7 @@ const UpcomingPanel: React.VFC<Props> = ((props) => {
                       onClick={() => 
                         window.open(`https://www.youtube.com/watch?v=${holoDatas.id}`)}
                       key={holoDatas.id}
-                      className='hover:shadow-[0_0px_0px_1px_#fff] 
-                      object-cover cursor-pointer opacity-20
-                      hover:opacity-80 bg-slate-100 hover:blur-none rounded-[10px]'
+                      className={`${style.panel} ${props.active5 ? 'opacity-[0.9]' : null}`}
                       // src={thumbnail} />
                       src={holoDatas.channel.id === 'UCvaTdHTWBGv3MKj3KVqJVCw' 
                         ? youtube_jpeg + holoDatas.id + youtube_jpeg_size.midium 
