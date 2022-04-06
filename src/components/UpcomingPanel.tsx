@@ -17,8 +17,8 @@ const UpcomingPanel: React.VFC<Props> = ((props) => {
   const youtube_jpeg = "https://img.youtube.com/vi/"
 
   return (
-    <div className='w-[80%]'>
-      <li className="px-[10px] max-w-[200px]  w-[20vw] flex flex-wrap items-center rounded-full">
+    <div>
+      <li className="px-[10px] max-w-[200px] md:w-[20vw]">
         {props.holoData.map(
           (holoDatas: any) =>  {
             return (
