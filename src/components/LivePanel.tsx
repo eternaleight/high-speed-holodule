@@ -14,7 +14,7 @@ const Live: React.VFC<Props> = ((props) => {
     bg-slate-100 hover:blur-none w-[100px] h-[70px] rounded-[10px]`,
     panel2: `hover:shadow-[0_0px_0px_1px_#f00] flex-1 object-cover 
     cursor-pointer opacity-[0.2] mr-1 mt-1 hover:opacity-[0.8] 
-    bg-slate-100 hover:blur-none w-[40%] h-[40%] rounded-[10px]`,
+    bg-slate-100 hover:blur-none w-[70%] h-[70%] rounded-[10px]`,
     panel3_light: `hover:shadow-none flex-1 object-cover 
     cursor-pointer opacity-[0.82] mr-1 mt-1 hover:opacity-[0.19] 
     bg-slate-100 hover:blur-none w-[100px] h-[70px] rounded-[10px]`,
