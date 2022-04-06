@@ -7,7 +7,7 @@
 
 $media-md: 640px;
 
-@media screen and (max-width: $media-md) {
+@media screen and (min-width: $media-md) {
   .hover .hover-text .text1 {
     font-size: 10px;
   }
@@ -160,6 +160,13 @@ body {
 
 .opa {
   width: 43px;
+  opacity: 0.3;
+  &:hover {
+    opacity: 0.9;
+  }
+}
+.opa2 {
+  width: 240px;
   opacity: 0.3;
   &:hover {
     opacity: 0.9;

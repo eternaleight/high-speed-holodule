@@ -52,11 +52,14 @@ const UpcomingPanel: React.VFC<Props> = ((props) => {
                       src={holoDatas.channel.id === 'UCvaTdHTWBGv3MKj3KVqJVCw' 
                         ? youtube_jpeg + holoDatas.id + youtube_jpeg_size.midium 
                         : youtube_jpeg + holoDatas.id + youtube_jpeg_size.large} />
-                    <p className='text-slate-300 opa'>
+                    <p className='text-slate-300 opa text-[14px]'>
                       {parseInt(
                         holoDatas.start_scheduled.slice(11,-8)) +9 < 25 
                           ? parseInt(holoDatas.start_scheduled.slice(11,-8)) +9 + ':00' 
                           : parseInt(holoDatas.start_scheduled.slice(11,-8)) -15 + ':00'}
+                    </p>
+                    <p className='text-slate-300 opa2 text-[14px]'>
+                      {holoDatas.title}
                     </p>
                   </div>
               ) : null })}
