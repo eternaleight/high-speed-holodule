@@ -172,10 +172,10 @@ const Main: React.VFC = () => {
                         <Button className='mb-1'variant="outlined" size="small" onClick={classToggle2}>
                           &#x2699;
                         </Button>
-                        <Button variant="outlined" size="small" onClick={classToggle3}>
+                        <Button className='mb-1' variant="outlined" size="small" onClick={classToggle3}>
                           ⚡️💡
                         </Button>
-                        <Button variant="outlined" size="small" onClick={classToggle5}>
+                        <Button className='mb-1' variant="outlined" size="small" onClick={classToggle5}>
                           ⚡️💡: 2
                         </Button>
                       </div>
