@@ -18,7 +18,7 @@ const UpcomingPanel: React.VFC<Props> = ((props) => {
 
   return (
     <div className='w-[80%]'>
-      <li className="px-[10px] flex flex-wrap items-center rounded-full">
+      <li className="px-[10px] max-w-[200px]  w-[20vw] flex flex-wrap items-center rounded-full">
         {props.holoData.map(
           (holoDatas: any) =>  {
             return (

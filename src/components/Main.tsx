@@ -161,7 +161,7 @@ const Main: React.VFC = () => {
                       <LivePanel holoData={holoData} active={active} active3={active3}/>
                       <UpcomingPanel holoData={holoData} active={active} active3={active3}/>
                     </ul>
-                    <div className='pr-2'>
+                    <div className='md:pl-[100px] pr-2'>
                       <PanelButton classToggle={classToggle}/>
                       <div className='flex flex-col w-[10px] h-[140px] opacity-80 mt-[10px]'>
                         <Button className='mb-1'variant="outlined" size="small" onClick={classToggle2}>
