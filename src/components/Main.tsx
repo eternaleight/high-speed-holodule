@@ -163,7 +163,7 @@ const Main: React.VFC = () => {
                 <br />
                 <div className="flex-1">
                   <div className='flex justify-around'>
-                    <ul className='w-[500px] flex flex-col items-center'>
+                    <ul className='w-[500px]'>
                       <LivePanel holoData={holoData} active={active} active3={active3}/>
                       <UpcomingPanel holoData={holoData} active={active} active3={active3} active5={active5}/>
                     </ul>

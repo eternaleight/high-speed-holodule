@@ -29,7 +29,7 @@ const Live: React.VFC<Props> = ((props) => {
   const youtube_jpeg = "https://img.youtube.com/vi/"
 
   return (
-    <div>
+    <div className='flex flex-col items-center'>
       <li className="px-[10px] flex flex-wrap items-center rounded-full">
         {props.holoData.map(
           (holoDatas: any) =>  {
