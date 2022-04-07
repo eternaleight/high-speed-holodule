@@ -15,7 +15,7 @@ const UpcomingPanel: React.VFC<Props> = ((props) => {
   };
   const style = {
     panel: `hover:shadow-[0_0px_0px_1px_#fff] object-cover cursor-pointer opacity-20
-    hover:opacity-80 bg-slate-100 hover:blur-none rounded-[0.2rem]`,
+    hover:opacity-80 bg-slate-100 hover:blur-none rounded-[10px]`,
   }
 
 
