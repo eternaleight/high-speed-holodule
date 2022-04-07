@@ -15,7 +15,7 @@ const UpcomingPanel: React.VFC<Props> = ((props) => {
   };
   const style = {
     panel: `hover:shadow-[0_0px_0px_1px_#fff] object-cover cursor-pointer opacity-20
-    hover:opacity-80 bg-slate-100 hover:blur-none max-sm:mr-1 max-sm:w-[35vw] rounded-[10px]
+    hover:opacity-80 bg-slate-100 hover:blur-none max-md:mr-1 max-md:w-[35vw] rounded-[10px]
      max-sm:flex-1 `,
   }
 
@@ -56,7 +56,7 @@ const UpcomingPanel: React.VFC<Props> = ((props) => {
                       src={holoDatas.channel.id === 'UCvaTdHTWBGv3MKj3KVqJVCw' 
                         ? youtube_jpeg + holoDatas.id + youtube_jpeg_size.midium 
                         : youtube_jpeg + holoDatas.id + youtube_jpeg_size.large} />
-                    <p className='max-sm:text-[10px] text-slate-300 relative text-[1vw] opa'>
+                    <p className='max-md:text-[14px] text-slate-300 relative text-[1.5vw] opacity-[0.9] hover:opacity-[0.3] w-[43px] '>
                       {parseInt(
                         holoDatas.start_scheduled.slice(11,-8)) +9 < 25 
                           ? parseInt(holoDatas.start_scheduled.slice(11,-8)) +9 + ':00' 
