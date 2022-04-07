@@ -11,13 +11,13 @@ const Live: React.VFC<Props> = ((props) => {
   const style = {
     panel: `hover:shadow-[0_0px_0px_1px_#f00] flex-1 object-cover 
     cursor-pointer opacity-[0.2] mr-1 mt-1 hover:opacity-[0.8] 
-    bg-slate-100 hover:blur-none w-[45%] h-[45%] rounded-[10px]`,
-    panel2: `hover:shadow-[0_0px_0px_1px_#f00] flex-1 object-cover 
+    bg-slate-100 hover:blur-none w-[45%] flex-1 rounded-[10px]`,
+    panel2: `hover:shadow-[0_0px_0px_1px_#f00]  object-cover 
     cursor-pointer opacity-[0.2] mr-1 mt-1 hover:opacity-[0.8] 
-    bg-slate-100 hover:blur-none w-[100%] h-[100%] rounded-[10px]`,
-    panel3_light: `hover:shadow-none flex-1 object-cover 
+    bg-slate-100 hover:blur-none w-[100%] flex-1 rounded-[10px]`,
+    panel3_light: `hover:shadow-none  object-cover 
     cursor-pointer opacity-[0.82] mr-1 mt-1 hover:opacity-[0.19] 
-    bg-slate-100 hover:blur-none w-[45%] h-[45%] rounded-[10px]`,
+    bg-slate-100 hover:blur-none w-[45%] rounded-[10px]`,
   }
 
   const youtube_jpeg_size = {
@@ -30,7 +30,7 @@ const Live: React.VFC<Props> = ((props) => {
 
   return (
     <div>
-      <li className="px-[10px] md:w-[50vw] ma:max-w-[300px] flex flex-wrap items-center rounded-full">
+      <li className="px-[10px] md:w-[50vw] flex flex-wrap items-center rounded-full">
         {props.holoData.map(
           (holoDatas: any) =>  {
             return (

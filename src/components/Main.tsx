@@ -156,7 +156,7 @@ const Main: React.VFC = () => {
         )}
       </div>
       <div>
-        <div className='text-[10px] bg-pink-200 text-size-1 hover:text-slate-100 hover:bg-blue-700 hover:cursor-pointer duration-300'>Main</div>
+        <div className='text-[10px] bg-slate-900 text-size-1 text-slate-200 hover:text-slate-100 hover:bg-blue-700 hover:cursor-pointer duration-300'>Main</div>
         <div>
           <div>
             <ul>
@@ -166,9 +166,7 @@ const Main: React.VFC = () => {
                   <div className='flex justify-around'>
                     <ul className='md:flex'>
                       <LivePanel holoData={holoData} active={active} active3={active3}/>
-                      <div className='flex justify-end right-100px'>
                       <UpcomingPanel holoData={holoData} active={active} active3={active3} active5={active5}/>
-</div>
                     </ul>
                     <div className='max-h-[500px]'>
                       <PanelButton classToggle={classToggle}/>

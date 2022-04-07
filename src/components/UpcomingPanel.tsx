@@ -15,7 +15,8 @@ const UpcomingPanel: React.VFC<Props> = ((props) => {
   };
   const style = {
     panel: `hover:shadow-[0_0px_0px_1px_#fff] object-cover cursor-pointer opacity-20
-    hover:opacity-80 bg-slate-100 hover:blur-none rounded-[10px]`,
+    hover:opacity-80 bg-slate-100 hover:blur-none max-sm:mr-1 max-sm:w-[35vw] rounded-[10px]
+     max-sm:flex-1 `,
   }
 
 
@@ -23,7 +24,7 @@ const UpcomingPanel: React.VFC<Props> = ((props) => {
 
   return (
     <div>
-      <li className="px-[10px] max-w-[300px] md:w-[20vw]">
+      <li className="flex flex-wrap px-[10px] md:w-[20vw]">
         {props.holoData.map(
           (holoDatas: any) =>  {
             return (
@@ -45,7 +46,7 @@ const UpcomingPanel: React.VFC<Props> = ((props) => {
                 holoDatas.channel.id !== 'UCdfMHxjcCc2HSd9qFvfJgjg' &&
                 holoDatas.channel.id !== '' &&
                 holoDatas.channel.id !== 'UCWsfcksUUpoEvhia0_ut0bA') ? (
-                  <div>
+                  <div className=''>
                     <img
                       onClick={() => 
                         window.open(`https://www.youtube.com/watch?v=${holoDatas.id}`)}
