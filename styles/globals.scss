@@ -63,15 +63,15 @@ body {
   width: 100vw;
   height: 12vh;
   overflow: hidden;
-  &.hover-img {
+  .hover-img {
     margin: 0;
     padding: 0; 
-    &img {
+    img {
       width: 100%;
       height: 100%;
     }
   }
-  &.hover-text {
+  .hover-text {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -83,7 +83,7 @@ body {
     opacity: 0;
     /*ホバーの動き方*/
     transition: 0.3s ease-in-out;
-    &.text1 {
+    .text1 {
       font-size: 14px;
       padding: 0 20px 0px;
     }
@@ -101,11 +101,11 @@ body {
   width: 100vw;
   height: 10vh;
 
-  &.hover-img2 {
+  .hover-img2 {
     margin: 0;
     padding: 0;
   }
-  &.hover-text2 .text2 {
+  .hover-text2 .text2 {
     font-size: 12px;
     padding: 0 20px 0px;
   }
