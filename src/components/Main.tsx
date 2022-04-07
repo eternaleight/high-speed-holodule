@@ -187,9 +187,8 @@ const Main: React.VFC = () => {
           <div className={`${active2 ? 'blur-box' : 'none' }`}></div>
         </div>
         <div onClick={classToggle2} className={`${active2 ? 'hover-text2' : 'none' }`}>
-          <div onClick={classToggle2} className="cursor-pointer text2 ml-[88vw]" >×</div>
-          <p className="text2">　💭</p>
-          <p className="text2"></p>
+          <div onClick={classToggle2} className="cursor-pointer max-sm:text-[2.5vw] ml-[92vw]" >×</div>
+          <p className="max-sm:text-[2.5vw]">　💭</p>
           <div className='flex items-end'>
             <div className='flex justify-center flex-1'>
               <div className='flex items-end'>
