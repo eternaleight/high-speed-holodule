@@ -23,7 +23,7 @@ const UpcomingPanel: React.VFC<Props> = ((props) => {
 
   return (
     <div>
-      <li className="px-[10px] max-w-[200px] md:w-[20vw]">
+      <li className="px-[10px] max-w-[300px] md:w-[20vw]">
         {props.holoData.map(
           (holoDatas: any) =>  {
             return (

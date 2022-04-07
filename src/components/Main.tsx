@@ -7,6 +7,7 @@ import TypeWriter from "./Typewriter"
 import LivePanel from "./LivePanel";
 import UpcomingPanel from "./UpcomingPanel";
 import PanelButton from "./Button"
+import { Zigzagu } from "./Ziguzagu";
 
 const Main: React.VFC = () => {
   const [holoData, setHoloData] = useState<number[]>([])
@@ -16,6 +17,7 @@ const Main: React.VFC = () => {
   const [holoData2, setHoloData2] = useState<number[]>([])
   const [active4, setActive4] = useState<number>(0)
   const [active5, setActive5] = useState<boolean>(false)
+
 
 
   // const reducer = (state: any, action: any) => {
@@ -162,11 +164,13 @@ const Main: React.VFC = () => {
                 <br />
                 <div className="">
                   <div className='flex justify-around'>
-                    <ul className='w-[500px] md:flex'>
+                    <ul className='md:flex'>
                       <LivePanel holoData={holoData} active={active} active3={active3}/>
+                      <div className='flex justify-end right-100px'>
                       <UpcomingPanel holoData={holoData} active={active} active3={active3} active5={active5}/>
+</div>
                     </ul>
-                    <div className='md:pl-[100px] pr-2'>
+                    <div className='max-h-[500px]'>
                       <PanelButton classToggle={classToggle}/>
                       <div className='flex flex-col w-[10px] h-[140px] opacity-80 mt-[10px]'>
                         <Button className='mb-1'variant="outlined" size="small" onClick={classToggle2}>
@@ -213,5 +217,4 @@ const Main: React.VFC = () => {
   )
 }
 export default Main
-
 
