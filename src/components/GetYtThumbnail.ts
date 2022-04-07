@@ -41,7 +41,7 @@ export const getYtThumbnail = async (videoId: any) => {
 
 (async () => {
  const urltest = await getYtThumbnail('sqEd2W6TEgk')
- console.log(urltest)
+ // console.log(urltest)
 })()
 
 const aaa = () => {
@@ -54,7 +54,7 @@ const aaa = () => {
       const res = await fetch(holoUrl)
       const users = await res.json()
       setHoloData(users)
-       console.log(users)
+       // console.log(users)
       return res
     } HoloApi()
   },[holoUrl]);
@@ -88,6 +88,6 @@ const aaa = () => {
     };
       update()
   },[])
-  console.log(mapUrl,'🔥')
+  // console.log(mapUrl,'🔥')
 }
 

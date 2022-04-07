@@ -111,7 +111,7 @@ const Main: React.VFC = () => {
       const res = await fetch(holoUrl2)
       const users = await res.json()
       setHoloData2(users)
-      console.log(users)
+      // console.log(users)
       return res
     })()
   },[holoUrl2])
@@ -179,7 +179,7 @@ const Main: React.VFC = () => {
                           ⚡️💡:2
                         </Button>
                       </div>
-                      <Link href={youtube}><img className='rounded-[10px] mt-[50px] mr-3 w-[8em] h-[4.8em] md:mt-[100px] md:w-[8em] md:h-[4.8em] hover:cursor-pointer opacity-20 hover:opacity-80 object-cover duration-300' src={`${youtube_jpeg}${youtube_id}${(youtube_id !== 'SIQ3DfHrd60') ? youtube_jpeg_size.large : youtube_jpeg_size.midium}`} /></Link>
+                      {/* <Link href={youtube}><img className='rounded-[10px] mt-[50px] mr-3 w-[8em] h-[4.8em] md:mt-[100px] md:w-[8em] md:h-[4.8em] hover:cursor-pointer opacity-20 hover:opacity-80 object-cover duration-300 max-md:invisible' src={`${youtube_jpeg}${youtube_id}${(youtube_id !== 'SIQ3DfHrd60') ? youtube_jpeg_size.large : youtube_jpeg_size.midium}`} /></Link> */}
                     </div>
                   </div>
                   <div className='flex flex-wrap pt-5'>
