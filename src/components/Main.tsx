@@ -193,8 +193,8 @@ const Main: React.VFC = () => {
             <div className='flex justify-center flex-1'>
               <div className='flex items-end'>
                 {/* <Image className="" src='/download-2.webp' width={50} height={50}/> */}
-                <p className='text-[30px] ml-5 md:mr-1'>💻</p>
-                <div className='p-2 text-white rounded-full md:w-[auto] mr-3 w-[80px] bg-[#111111aa] sm:text-[12px] text-[0.5rem]'><TypeWriter data={typeWriter} /></div>
+                <p className='text-[30px] ml-4 md:mr-1'>💻</p>
+                <div className='p-2 text-white rounded-full md:w-[auto] mr-1 w-[90px] bg-[#111111aa] sm:text-[12px] text-[0.5rem]'><TypeWriter data={typeWriter} /></div>
               </div>
               <HoloButton classToggle2={classToggle2}/>
             </div>
