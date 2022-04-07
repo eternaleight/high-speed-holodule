@@ -46,7 +46,7 @@ const Main: React.VFC = () => {
     setActive3(!active3)
   },[active3])
 
-  const typeWriter = ["ぼたんをぜ~~っったいにおすんじゃ~ないよ~~そこのクマ~~!", "こんにちは!"];
+  const typeWriter = ["ボタンを押してLet's カスタマイズ !!","ボタンを選ぶと便利なことが起きます⚡️",]
 
   const classToggle4 = useCallback(() => {
     setActive4((prev) => prev + 1)
@@ -192,7 +192,8 @@ const Main: React.VFC = () => {
           <div className='flex items-end'>
             <div className='flex justify-center flex-1'>
               <div className='flex items-end'>
-                <Image className="" src='/download-2.webp' width={50} height={50}/>
+                {/* <Image className="" src='/download-2.webp' width={50} height={50}/> */}
+                <p className='text-[30px] ml-5 md:mr-1'>💻</p>
                 <div className='p-2 text-white rounded-full md:w-[auto] mr-3 w-[80px] bg-[#111111aa] sm:text-[12px] text-[0.5rem]'><TypeWriter data={typeWriter} /></div>
               </div>
               <HoloButton classToggle2={classToggle2}/>
