@@ -155,13 +155,13 @@ const Main: React.VFC = () => {
             <ul>
               <li className="pt-[0.25rem] pb-[10px] gap-1">
                 <br />
-                <div className="flex-1">
+                <div className="">
                   <div className='flex justify-around'>
-                    <ul className='w-[500px] flex flex-col items-center'>
+                    <ul className='w-[500px] md:flex'>
                       <LivePanel holoData={holoData} active={active} active3={active3}/>
                       <UpcomingPanel holoData={holoData} active={active} active3={active3}/>
                     </ul>
-                    <div className='pr-2'>
+                    <div className='md:pl-[100px] pr-2'>
                       <PanelButton classToggle={classToggle}/>
                       <div className='flex flex-col w-[10px] h-[140px] opacity-80 mt-[10px]'>
                         <Button className='mb-1'variant="outlined" size="small" onClick={classToggle2}>
