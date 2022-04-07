@@ -65,7 +65,7 @@ const Live: React.VFC<Props> = ((props) => {
           }
         )}
       </li>
-      <h2 className='mt-1 mb-6 ml-3 text-[1.5vw] text-white opacity-20 hover:opacity-80'>放送中</h2>
+      <h2 className='max-sm:text-[12px] mt-1 mb-6 ml-3 text-[1.5vw] text-white opacity-20 hover:opacity-80'>放送中</h2>
     </div>
   )
 })

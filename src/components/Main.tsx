@@ -1,7 +1,7 @@
-import {useReducer, useCallback, useEffect, useState} from "react"
+import {useCallback, useEffect, useState} from "react"
 import Link from "next/link"
 import Button from '@mui/material/Button';
-import Image from "next/image";
+// import Image from "next/image";
 import HoloButton from "./HoloButton";
 import TypeWriter from "./Typewriter"
 import LivePanel from "./LivePanel";
@@ -15,24 +15,25 @@ const Main: React.VFC = () => {
   const [active3, setActive3] = useState<boolean>(false)
   const [holoData2, setHoloData2] = useState<number[]>([])
   const [active4, setActive4] = useState<number>(0)
+  const [active5, setActive5] = useState<boolean>(false)
 
 
-  const reducer = (state: any, action: any) => {
-    switch (action.type) {
-      case 'ACTIVE':
-        return {toggle: setActive(!active)}
-      case 'ACTIVE2':
-        return {toggle: setActive(!active2)}
-      case 'ACTIVE3':
-        return {toggle: setActive(!active3)}
-      case 'ACTIVE4':
-        return {toggle: classToggle4}
-      default:
-        return state;
-    }
-  }
+  // const reducer = (state: any, action: any) => {
+  //   switch (action.type) {
+  //     case 'ACTIVE':
+  //       return {toggle: setActive(!active)}
+  //     case 'ACTIVE2':
+  //       return {toggle: setActive(!active2)}
+  //     case 'ACTIVE3':
+  //       return {toggle: setActive(!active3)}
+  //     case 'ACTIVE4':
+  //       return {toggle: classToggle4}
+  //     default:
+  //       return state;
+  //   }
+  // }
 
-  const [state, dispatch] = useReducer(reducer, {toggle: false})
+  // const [state, dispatch] = useReducer(reducer, {toggle: false})
 
   const classToggle = useCallback(() => {
     setActive(!active)
@@ -46,14 +47,18 @@ const Main: React.VFC = () => {
     setActive3(!active3)
   },[active3])
 
+  const classToggle5 = useCallback(() => {
+    setActive5(!active5)
+  },[active5])
+
   const typeWriter = ["ボタンを押してLet's カスタマイズ !!","ボタンを選ぶと便利なことが起きます⚡️",]
 
-  const classToggle4 = useCallback(() => {
-    setActive4((prev) => prev + 1)
-    if (active4 > 3) {
-      setActive4((prev2) => prev2 - 4)
-    }
-  },[active4])
+//   const classToggle4 = useCallback(() => {
+//     setActive4((prev) => prev + 1)
+//     if (active4 > 3) {
+//       setActive4((prev2) => prev2 - 4)
+//     }
+//   },[active4])
 
 
 
@@ -159,7 +164,7 @@ const Main: React.VFC = () => {
                   <div className='flex justify-around'>
                     <ul className='w-[500px] md:flex'>
                       <LivePanel holoData={holoData} active={active} active3={active3}/>
-                      <UpcomingPanel holoData={holoData} active={active} active3={active3}/>
+                      <UpcomingPanel holoData={holoData} active={active} active3={active3} active5={active5}/>
                     </ul>
                     <div className='md:pl-[100px] pr-2'>
                       <PanelButton classToggle={classToggle}/>
@@ -167,8 +172,11 @@ const Main: React.VFC = () => {
                         <Button className='mb-1'variant="outlined" size="small" onClick={classToggle2}>
                           &#x2699;
                         </Button>
-                        <Button variant="outlined" size="small" onClick={classToggle3}>
+                        <Button className='mb-1' variant="outlined" size="small" onClick={classToggle3}>
                           ⚡️💡
+                        </Button>
+                        <Button variant="outlined" size="small" onClick={classToggle5}>
+                          ⚡️💡:2
                         </Button>
                       </div>
                       <Link href={youtube}><img className='rounded-[10px] mt-[50px] mr-3 w-[8em] h-[4.8em] md:mt-[100px] md:w-[8em] md:h-[4.8em] hover:cursor-pointer opacity-20 hover:opacity-80 object-cover duration-300' src={`${youtube_jpeg}${youtube_id}${(youtube_id !== 'SIQ3DfHrd60') ? youtube_jpeg_size.large : youtube_jpeg_size.midium}`} /></Link>
