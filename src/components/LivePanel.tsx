@@ -58,10 +58,10 @@ const Live: React.VFC<Props> = ((props) => {
                     key={holoDatas.id}
                     className={`${(!props.active ? style.panel : style.panel2)}
                       ${(!props.active3 ? style.panel : style.panel3_light)}`}
-                   // src={holoDatas.channel.id === 'UCvaTdHTWBGv3MKj3KVqJVCw' 
+                    // src={holoDatas.channel.id === 'UCvaTdHTWBGv3MKj3KVqJVCw' 
                     // ? youtube_jpeg + holoDatas.id + youtube_jpeg_size.midium 
-                     // : youtube_jpeg + holoDatas.id + youtube_jpeg_size.large} />
-                      src={youtube_jpeg + holoDatas.id + youtube_jpeg_size.large} />
+                    // : youtube_jpeg + holoDatas.id + youtube_jpeg_size.large} />
+                    src={youtube_jpeg + holoDatas.id + youtube_jpeg_size.large} />
               ) : null
           }
         )}
