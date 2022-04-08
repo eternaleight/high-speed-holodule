@@ -109,12 +109,33 @@ const Main: React.VFC = () => {
     })()
   },[holoUrl2])
 
+  // type Holodatas = {
+  //   available_at: string,
+  //   channel: {
+  //     english_name: string,
+  //     id: string,
+  //     name: string,
+  //     org: string,
+  //     photo: string,
+  //     type: string,
+  //   },
+  //   duration: number,
+  //   id: string,
+  //   live_viewres: number,
+  //   published_at: string,
+  //   start_actual: string,
+  //   start_scheduled: string,
+  //   status: string,
+  //   title: string,
+  //   topic_id: string,
+  //   type: string,
+  // }
 
   return (
     <div>
       <div className='flex flex-wrap w-[100vw]'>
         {holoData.map (
-          (holoDatas: any) =>  {
+           (holoDatas: any) =>  {
             return (
               holoDatas.channel.org === "Hololive" &&
                 holoDatas.status === "live" &&
