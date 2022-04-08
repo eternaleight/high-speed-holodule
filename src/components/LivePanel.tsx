@@ -16,7 +16,7 @@ const Live: React.VFC<Props> = ((props) => {
     cursor-pointer opacity-[0.2] mr-1 mt-1 hover:opacity-[0.8] 
     bg-slate-100 hover:blur-none w-[100%] flex-1 rounded-[10px]`,
     panel3_light: `hover:shadow-none  object-cover 
-    cursor-pointer opacity-[0.82] mr-1 mt-1 hover:opacity-[0.19] 
+    cursor-pointer opacity-[0.89] mr-1 mt-1 hover:opacity-[0.19] 
     bg-slate-100 hover:blur-none w-[45%] rounded-[10px]`,
   }
 
