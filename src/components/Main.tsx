@@ -8,6 +8,7 @@ import LivePanel from "./LivePanel";
 import UpcomingPanel from "./UpcomingPanel";
 import PanelButton from "./Button"
 
+
 const Main: React.VFC = () => {
   const [holoData, setHoloData] = useState<number[]>([])
   const [active, setActive] = useState<boolean>(false)
@@ -15,6 +16,7 @@ const Main: React.VFC = () => {
   const [active3, setActive3] = useState<boolean>(false)
   const [holoData2, setHoloData2] = useState<number[]>([])
   const [active5, setActive5] = useState<boolean>(false)
+
 
   // const reducer = (state: any, action: any) => {
   //   switch (action.type) {
