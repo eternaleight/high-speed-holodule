@@ -1,13 +1,12 @@
 import {useCallback, useEffect, useState} from "react"
 import Link from "next/link"
 import Button from '@mui/material/Button';
-// import Image from "next/image";
+import Image from "next/image";
 import HoloButton from "./HoloButton";
 import TypeWriter from "./Typewriter"
 import LivePanel from "./LivePanel";
 import UpcomingPanel from "./UpcomingPanel";
 import PanelButton from "./Button"
-import { Zigzagu } from "./Ziguzagu";
 
 const Main: React.VFC = () => {
   const [holoData, setHoloData] = useState<number[]>([])
@@ -15,10 +14,7 @@ const Main: React.VFC = () => {
   const [active2, setActive2] = useState<boolean>(false)
   const [active3, setActive3] = useState<boolean>(false)
   const [holoData2, setHoloData2] = useState<number[]>([])
-  const [active4, setActive4] = useState<number>(0)
   const [active5, setActive5] = useState<boolean>(false)
-
-
 
   // const reducer = (state: any, action: any) => {
   //   switch (action.type) {
@@ -28,8 +24,6 @@ const Main: React.VFC = () => {
   //       return {toggle: setActive(!active2)}
   //     case 'ACTIVE3':
   //       return {toggle: setActive(!active3)}
-  //     case 'ACTIVE4':
-  //       return {toggle: classToggle4}
   //     default:
   //       return state;
   //   }
@@ -37,6 +31,13 @@ const Main: React.VFC = () => {
 
   // const [state, dispatch] = useReducer(reducer, {toggle: false})
 
+//   const classToggle4 = useCallback(() => {
+//     setActive4((prev) => prev + 1)
+//     if (active4 > 3) {
+//       setActive4((prev2) => prev2 - 4)
+//     }
+//   },[active4])
+  //
   const classToggle = useCallback(() => {
     setActive(!active)
   },[active])
@@ -55,45 +56,34 @@ const Main: React.VFC = () => {
 
   const typeWriter = ["ボタンを押してLet's カスタマイズ !!","ボタンを選ぶと便利なことが起きます⚡️",]
 
-//   const classToggle4 = useCallback(() => {
-//     setActive4((prev) => prev + 1)
-//     if (active4 > 3) {
-//       setActive4((prev2) => prev2 - 4)
-//     }
-//   },[active4])
 
+  //const youtube_jpeg_size = {
+  //  large: "/maxresdefault.jpg",
+  //  midium: "/sddefault.jpg"
+  //};
 
+  //const donkey = [
+  //  //Banjyo Kazooie
+  //  'https://www.youtube.com/watch?v=aS40K53JQIg',
+  //  //Stickerbrush Symphony
+  //  //https://www.youtube.com/watch?v=BW3Gbo7bmMI
+  //  //Aquatic Ambience
+  //  'https://www.youtube.com/watch?v=SIQ3DfHrd60',
+  //  //
+  //  'https://www.youtube.com/watch?v=YUIk2PUU2Vg',
+  //  //
+  //  'https://www.youtube.com/watch?v=dIKdZ2827rM',
+  //  //
+  //  'https://www.youtube.com/watch?v=hReWJwH8J0c',
+  //  //kirinomori
+  //  'https://www.youtube.com/watch?v=AnEfB1F9BaY',
+  //]
 
+  //// const channelId = 'https://www.youtube.com/channel/'
 
-
-
-  const youtube_jpeg_size = {
-    large: "/maxresdefault.jpg",
-    midium: "/sddefault.jpg"
-  };
-
-  const donkey = [
-    //Banjyo Kazooie
-    'https://www.youtube.com/watch?v=aS40K53JQIg',
-    //Stickerbrush Symphony
-    //https://www.youtube.com/watch?v=BW3Gbo7bmMI
-    //Aquatic Ambience
-    'https://www.youtube.com/watch?v=SIQ3DfHrd60',
-    //
-    'https://www.youtube.com/watch?v=YUIk2PUU2Vg',
-    //
-    'https://www.youtube.com/watch?v=dIKdZ2827rM',
-    //
-    'https://www.youtube.com/watch?v=hReWJwH8J0c',
-    //kirinomori
-    'https://www.youtube.com/watch?v=AnEfB1F9BaY',
-  ]
-
-  // const channelId = 'https://www.youtube.com/channel/'
-
-  const youtube_jpeg = "https://img.youtube.com/vi/"
-  const youtube = donkey[Math.floor(Math.random() * donkey.length)]
-  const youtube_id = youtube.slice(32)
+  //const youtube_jpeg = "https://img.youtube.com/vi/"
+  //const youtube = donkey[Math.floor(Math.random() * donkey.length)]
+  //const youtube_id = youtube.slice(32)
   const holoVideo = 'https://www.youtube.com/watch?v='
   const holoUrl = 'https://holodex.net/api/v2/live/'
   const holoUrl2 = 'https://api.holotools.app/v1/videos/'
@@ -113,7 +103,6 @@ const Main: React.VFC = () => {
       const res = await fetch(holoUrl2)
       const users = await res.json()
       setHoloData2(users)
-      // console.log(users)
       return res
     })()
   },[holoUrl2])
@@ -155,7 +144,6 @@ const Main: React.VFC = () => {
           }
         )}
       </div>
-      <div>
         <div className='text-[10px] bg-slate-900 text-size-1 text-slate-200 hover:text-slate-100 hover:bg-blue-700 hover:cursor-pointer duration-300'>Main</div>
         <div>
           <div>
@@ -191,7 +179,6 @@ const Main: React.VFC = () => {
             </ul>
           </div>
         </div>
-      </div>
       <section className="hover2">
         <div className='hover-img2'>
           <div className={`${active2 ? 'blur-box' : 'none' }`}></div>
