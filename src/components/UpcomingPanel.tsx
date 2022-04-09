@@ -52,11 +52,10 @@ const UpcomingPanel: React.VFC<Props> = ((props) => {
                         window.open(`https://www.youtube.com/watch?v=${holoDatas.id}`)}
                       key={holoDatas.id}
                       className={`${style.panel} ${props.active5 ? 'opacity-[0.9]' : null}`}
-                      // src={thumbnail} />
-                      // src={holoDatas.channel.id === 'UCvaTdHTWBGv3MKj3KVqJVCw' 
-                       // ? youtube_jpeg + holoDatas.id + youtube_jpeg_size.midium 
-                       // : youtube_jpeg + holoDatas.id + youtube_jpeg_size.large} />
-                      src={youtube_jpeg + holoDatas.id + youtube_jpeg_size.large} />
+                      src={holoDatas.channel.id === 'UCvaTdHTWBGv3MKj3KVqJVCw' 
+                       ? youtube_jpeg + holoDatas.id + youtube_jpeg_size.midium 
+                       : youtube_jpeg + holoDatas.id + youtube_jpeg_size.large} />
+                      {/* src={youtube_jpeg + holoDatas.id + youtube_jpeg_size.large} /> */}
                     <p className='max-md:text-[14px] text-slate-300 relative text-[clamp(14px,1.5vw,16px)] opacity-[0.9] hover:opacity-[0.3] w-[43px] '>
                       {parseInt(
                         holoDatas.start_scheduled.slice(11,-8)) +9 < 25 
