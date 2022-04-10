@@ -15,7 +15,7 @@ const UpcomingPanel: React.VFC<Props> = ((props) => {
   };
   const style = {
     panel: `hover:shadow-[0_0px_0px_1px_#fff] object-cover cursor-pointer opacity-20
-    hover:opacity-80 bg-slate-100 hover:blur-none max-md:mr-1 max-md:w-[35vw] rounded-[10px]
+    hover:opacity-80 bg-slate-100 hover:blur-none max-md:ml-1 max-md:w-[36vw] rounded-[10px]
      max-sm:flex-1 `,
   }
 
@@ -24,7 +24,7 @@ const UpcomingPanel: React.VFC<Props> = ((props) => {
 
   return (
     <div>
-      <li className="flex flex-wrap px-[10px] md:w-[20vw]">
+      <li className="flex flex-wrap sm:px-[10px] max-md:justify-evenly md:w-[20vw]">
         {props.holoData.map(
           (holoDatas: any) =>  {
             return (
@@ -56,12 +56,12 @@ const UpcomingPanel: React.VFC<Props> = ((props) => {
                        ? youtube_jpeg + holoDatas.id + youtube_jpeg_size.midium 
                        : youtube_jpeg + holoDatas.id + youtube_jpeg_size.large} />
                       {/* src={youtube_jpeg + holoDatas.id + youtube_jpeg_size.large} /> */}
-                    <p className='max-md:text-[14px] text-slate-300 relative text-[clamp(14px,1.5vw,16px)] opacity-[0.9] hover:opacity-[0.3] w-[43px] '>
-                      {parseInt(
+                    <p className='max-md:text-[14px] inline text-slate-300 relative text-[clamp(14px,1.5vw,16px)] opacity-[0.9] hover:opacity-[0.3]'> {parseInt(
                         holoDatas.start_scheduled.slice(11,-8)) +9 < 25 
                           ? parseInt(holoDatas.start_scheduled.slice(11,-8)) +9 + ':00' 
                           : parseInt(holoDatas.start_scheduled.slice(11,-8)) -15 + ':00'}
                     </p>
+                    <p className='w-[26vw] max-sm:w-[35vw] max-md:text-[12px] text-slate-300 font-sans'>{holoDatas.title}</p>
                   </div>
               ) : null })}
       </li>
