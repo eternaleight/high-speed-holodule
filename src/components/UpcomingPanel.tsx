@@ -51,7 +51,7 @@ const UpcomingPanel: React.VFC<Props> = ((props) => {
                       onClick={() => 
                         window.open(`https://www.youtube.com/watch?v=${holoDatas.id}`)}
                       key={holoDatas.id}
-                      className={`${style.panel} ${props.active5 ? 'opacity-[0.9]' : null}`}
+                      className={`${style.panel} ${props.active3 ? 'opacity-[0.9]' : null}`}
                       src={holoDatas.channel.id === 'UCvaTdHTWBGv3MKj3KVqJVCw' 
                        ? youtube_jpeg + holoDatas.id + youtube_jpeg_size.midium 
                        : youtube_jpeg + holoDatas.id + youtube_jpeg_size.large} />
