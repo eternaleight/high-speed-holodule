@@ -214,7 +214,7 @@ const Main: React.VFC = () => {
               <div className='flex items-end'>
                 {/* <Image className="" src='/download-2.webp' width={50} height={50}/> */}
                 <div className='flex flex-col'>
-                  <p className='text-slate-300 md:ml-12 ml-[clamp(16px,9.5vw,34px)] md:p-[3px] p-[2px] md:w-[100px] w-[70px] font1 text-center md:text-[14px] text-[10px] mr-[-110px] mb-[200px] bg-[#ffffff11] rounded-[1rem]'>commingsoon!!</p>
+                  <p className='text-slate-300 md:ml-12  ml-[clamp(16px,9.5vw,36px)] md:p-[3px] p-[2px] md:w-[100px] w-[70px] font1 text-center md:text-[14px] text-[10px] mr-[-110px] mb-[200px] bg-[#ffffff11] rounded-[1rem]'>commingsoon!!</p>
                 <p className='text-[30px] ml-4 md:mr-1'>💻</p>
                 </div>
                 <div className='p-2 text-white rounded-full md:w-[auto] mr-1 w-[90px] bg-[#111111aa] sm:text-[12px] text-[0.5rem]'><TypeWriter data={typeWriter} /></div>
