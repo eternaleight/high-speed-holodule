@@ -3,6 +3,10 @@ module.exports = {
     './src/pages/**/*.{js,ts,jsx,tsx}',
     './src/components/**/*.{js,ts,jsx,tsx}',
   ],
+  fontFamily: {
+    noto: ["Noto Sans JP"],
+    fancy: ["Dancing Script"],
+  },
   theme: {
     screens: {
       'sm': '640px',

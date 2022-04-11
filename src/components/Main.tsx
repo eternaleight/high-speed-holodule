@@ -208,12 +208,15 @@ const Main: React.VFC = () => {
         </div>
         <div onClick={classToggle2} className={`${active2 ? 'hover-text2' : 'none' }`}>
           <div onClick={classToggle2} className="cursor-pointer max-sm:text-[2.5vw] ml-[95vw]" >×</div>
-          <p className="max-sm:text-[2.5vw]">　💭</p>
+          <p className="max-sm:text-[2.5vw]">　</p>
           <div className='flex items-end'>
             <div className='flex justify-center flex-1'>
               <div className='flex items-end'>
                 {/* <Image className="" src='/download-2.webp' width={50} height={50}/> */}
+                <div className='flex flex-col'>
+                <p className='text-slate-300 p-1 font1 text-center px-[12px] mr-[-110px] mb-[200px] bg-[#ffffff11] rounded-[1rem]'>commingsoon/準備中</p>
                 <p className='text-[30px] ml-4 md:mr-1'>💻</p>
+                </div>
                 <div className='p-2 text-white rounded-full md:w-[auto] mr-1 w-[90px] bg-[#111111aa] sm:text-[12px] text-[0.5rem]'><TypeWriter data={typeWriter} /></div>
               </div>
               <HoloButton classToggle2={classToggle2}/>
