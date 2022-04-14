@@ -1,13 +1,12 @@
-import { useCallback, useEffect, useState } from 'react'
-import Link from 'next/link'
-import Button from '@mui/material/Button'
-import Image from 'next/image'
-import HoloButton from './HoloButton'
-import TypeWriter from './Typewriter'
-import LivePanel from './LivePanel'
-import UpcomingPanel from './UpcomingPanel'
-import PanelButton from './Button'
-
+import { useCallback, useEffect, useState } from "react"
+import Link from "next/link"
+import Button from "@mui/material/Button"
+import Image from "next/image"
+import HoloButton from "./HoloButton"
+import TypeWriter from "./Typewriter"
+import LivePanel from "./LivePanel"
+import UpcomingPanel from "./UpcomingPanel"
+import PanelButton from "./Button"
 
 export type Api = {
   available_at: string
@@ -15,9 +14,9 @@ export type Api = {
     english_name: string
     id: string
     name: string
-    org?: 'Hololive' | 'Nijisanji'
+    org?: "Hololive" | "Nijisanji"
     photo: string
-    type: string 
+    type: string
   }
   duration: number
   id: string
@@ -25,7 +24,7 @@ export type Api = {
   published_at: string
   start_actual: string
   start_scheduled: string
-  status: 'live' | 'upcoming'
+  status: "live" | "upcoming"
   title: string
   topic_id: string
   type: string
@@ -79,7 +78,7 @@ const Main: React.VFC = () => {
 
   const typeWriter = [
     "ボタンを押してLet's カスタマイズ !!",
-    'ボタンを選ぶと便利なことが起きます⚡️',
+    "ボタンを選ぶと便利なことが起きます⚡️",
   ]
 
   //const youtube_jpeg_size = {
@@ -109,9 +108,9 @@ const Main: React.VFC = () => {
   //const youtube_jpeg = "https://img.youtube.com/vi/"
   //const youtube = donkey[Math.floor(Math.random() * donkey.length)]
   //const youtube_id = youtube.slice(32)
-  const holoVideo = 'https://www.youtube.com/watch?v='
-  const holoUrl = 'https://holodex.net/api/v2/live/'
-  const holoUrl2 = 'https://api.holotools.app/v1/videos/'
+  const holoVideo = "https://www.youtube.com/watch?v="
+  const holoUrl = "https://holodex.net/api/v2/live/"
+  const holoUrl2 = "https://api.holotools.app/v1/videos/"
 
   useEffect(() => {
     async function HoloApi() {
@@ -132,42 +131,38 @@ const Main: React.VFC = () => {
   //     return res
   //   })()
   // }, [holoUrl2])
-  
-
 
   return (
     <div>
       <div className="flex w-[100vw] flex-wrap">
         {holoData.map((holoDatas: Api) => {
-          return holoDatas.channel.org === 'Hololive' &&
-            holoDatas.status === 'live' &&
-            holoDatas.channel.id !== 'UCKeAhJvy8zgXWbh9duVjIaQ' &&
-            holoDatas.channel.id !== 'UCZgOv3YDEs-ZnZWDYVwJdmA' &&
-            holoDatas.channel.id !== 'UC9mf_ZVpouoILRY9NUIaK-w' &&
-            holoDatas.channel.id !== 'UCNVEsYbiZjH5QLmGeSgTSzg' &&
-            holoDatas.channel.id !== 'UCGNI4MENvnsymYjKiZwv9eg' &&
-            holoDatas.channel.id !== 'UCANDOlYTJT7N5jlRC3zfzVA' &&
-            holoDatas.channel.id !== 'UChSvpZYRPh0FvG4SJGSga3g' &&
-            holoDatas.channel.id !== 'UCwL7dgTxKo8Y4RFIKWaf8gA' &&
-            holoDatas.channel.id !== 'UC6t3-_N8A6ME1JShZHHqOMw' &&
-            holoDatas.channel.id !== '' &&
-            holoDatas.channel.id !== 'UCc88OV45ICgHbn3ZqLLb52w' &&
-            holoDatas.channel.id !== 'UCgRqGV1gBf2Esxh0Tz1vxzw' &&
-            holoDatas.channel.id !== 'UCkT1u65YS49ca_LsFwcTakw' &&
-            holoDatas.channel.id !== 'UCdfMHxjcCc2HSd9qFvfJgjg' &&
-            holoDatas.channel.id !== '' &&
-            holoDatas.channel.id !== 'UCWsfcksUUpoEvhia0_ut0bA' ? (
-              <div>
-                <img
-                  key={holoDatas.id}
-                  onClick={() => window.open(`${holoVideo}${holoDatas.id}`)}
-                  className="w-[100px] cursor-pointer"
-                  src={holoDatas.channel.photo}
-                />
-                <p className="w-[300px] text-[14px] text-white">
-                  {holoDatas.title}
-                </p>
-              </div>
+          return holoDatas.channel.org === "Hololive" &&
+            holoDatas.status === "live" &&
+            holoDatas.channel.id !== "UCKeAhJvy8zgXWbh9duVjIaQ" &&
+            holoDatas.channel.id !== "UCZgOv3YDEs-ZnZWDYVwJdmA" &&
+            holoDatas.channel.id !== "UC9mf_ZVpouoILRY9NUIaK-w" &&
+            holoDatas.channel.id !== "UCNVEsYbiZjH5QLmGeSgTSzg" &&
+            holoDatas.channel.id !== "UCGNI4MENvnsymYjKiZwv9eg" &&
+            holoDatas.channel.id !== "UCANDOlYTJT7N5jlRC3zfzVA" &&
+            holoDatas.channel.id !== "UChSvpZYRPh0FvG4SJGSga3g" &&
+            holoDatas.channel.id !== "UCwL7dgTxKo8Y4RFIKWaf8gA" &&
+            holoDatas.channel.id !== "UC6t3-_N8A6ME1JShZHHqOMw" &&
+            holoDatas.channel.id !== "" &&
+            holoDatas.channel.id !== "UCc88OV45ICgHbn3ZqLLb52w" &&
+            holoDatas.channel.id !== "UCgRqGV1gBf2Esxh0Tz1vxzw" &&
+            holoDatas.channel.id !== "UCkT1u65YS49ca_LsFwcTakw" &&
+            holoDatas.channel.id !== "UCdfMHxjcCc2HSd9qFvfJgjg" &&
+            holoDatas.channel.id !== "" &&
+            holoDatas.channel.id !== "UCWsfcksUUpoEvhia0_ut0bA" ? (
+            <div>
+              <img
+                key={holoDatas.id}
+                onClick={() => window.open(`${holoVideo}${holoDatas.id}`)}
+                className="w-[100px] cursor-pointer"
+                src={holoDatas.channel.photo}
+              />
+              <p className="w-[300px] text-[14px] text-white">{holoDatas.title}</p>
+            </div>
           ) : null
         })}
       </div>
@@ -182,11 +177,7 @@ const Main: React.VFC = () => {
               <div className="">
                 <div className="flex justify-around">
                   <ul className="md:flex">
-                    <LivePanel
-                      holoData={holoData}
-                      active={active}
-                      active3={active3}
-                    />
+                    <LivePanel holoData={holoData} active={active} active3={active3} />
                     <UpcomingPanel
                       holoData={holoData}
                       active={active}
@@ -228,16 +219,10 @@ const Main: React.VFC = () => {
       </div>
       <section className="hover2">
         <div className="hover-img2">
-          <div className={`${active2 ? 'blur-box' : 'none'}`}></div>
+          <div className={`${active2 ? "blur-box" : "none"}`}></div>
         </div>
-        <div
-          onClick={classToggle2}
-          className={`${active2 ? 'hover-text2' : 'none'}`}
-        >
-          <div
-            onClick={classToggle2}
-            className="ml-[95vw] cursor-pointer max-sm:text-[2.5vw]"
-          >
+        <div onClick={classToggle2} className={`${active2 ? "hover-text2" : "none"}`}>
+          <div onClick={classToggle2} className="ml-[95vw] cursor-pointer max-sm:text-[2.5vw]">
             ×
           </div>
           <p className="max-sm:text-[2.5vw]">　</p>
