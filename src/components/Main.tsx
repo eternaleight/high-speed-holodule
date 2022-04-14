@@ -8,8 +8,31 @@ import LivePanel from './LivePanel'
 import UpcomingPanel from './UpcomingPanel'
 import PanelButton from './Button'
 
+
+export type Api = {
+  available_at: string
+  channel: {
+    english_name: string
+    id: string
+    name: string
+    org?: 'Hololive' | 'Nijisanji'
+    photo: string
+    type: string 
+  }
+  duration: number
+  id: string
+  live_viewres: number
+  published_at: string
+  start_actual: string
+  start_scheduled: string
+  status: 'live' | 'upcoming'
+  title: string
+  topic_id: string
+  type: string
+}
+
 const Main: React.VFC = () => {
-  const [holoData, setHoloData] = useState<number[]>([])
+  const [holoData, setHoloData] = useState<Api[]>([])
   const [active, setActive] = useState<boolean>(false)
   const [active2, setActive2] = useState<boolean>(false)
   const [active3, setActive3] = useState<boolean>(false)
@@ -101,41 +124,21 @@ const Main: React.VFC = () => {
     HoloApi()
   }, [holoUrl])
 
-  useEffect(() => {
-    ;(async () => {
-      const res = await fetch(holoUrl2)
-      const users = await res.json()
-      setHoloData2(users)
-      return res
-    })()
-  }, [holoUrl2])
+  // useEffect(() => {
+  //   ;(async () => {
+  //     const res = await fetch(holoUrl2)
+  //     const users = await res.json()
+  //     setHoloData2(users)
+  //     return res
+  //   })()
+  // }, [holoUrl2])
+  
 
-  // type Holodatas = {
-  //   available_at: string
-  //   channel: {
-  //     english_name: string
-  //     id: string
-  //     name: string
-  //     org: string
-  //     photo: string
-  //     type: string
-  //   }[]
-  //   duration: number
-  //   id: string
-  //   live_viewres: number
-  //   published_at: string
-  //   start_actual: string
-  //   start_scheduled: string
-  //   status: string
-  //   title: string
-  //   topic_id: string
-  //   type: string
-  // }
 
   return (
     <div>
       <div className="flex w-[100vw] flex-wrap">
-        {holoData.map((holoDatas: any) => {
+        {holoData.map((holoDatas: Api) => {
           return holoDatas.channel.org === 'Hololive' &&
             holoDatas.status === 'live' &&
             holoDatas.channel.id !== 'UCKeAhJvy8zgXWbh9duVjIaQ' &&
@@ -260,4 +263,5 @@ const Main: React.VFC = () => {
     </div>
   )
 }
+
 export default Main

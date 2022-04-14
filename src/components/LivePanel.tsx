@@ -1,9 +1,10 @@
 import React from "react"
+import type { Api } from "./Main"
 
 type Props = {
   active: boolean,
   active3: boolean,
-  holoData: number[],
+  holoData: Api[],
 }
 
 const Live: React.VFC<Props> = ((props) => {
