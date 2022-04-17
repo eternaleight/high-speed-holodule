@@ -225,7 +225,7 @@ const Main: React.VFC = () => {
           <div onClick={classToggle2} className='ml-[95vw] cursor-pointer max-sm:text-[2.5vw]'>
             ×
           </div>
-          <p className='max-sm:text-[2.5vw]'>　</p>
+          <p className='max-sm:text-[2.5vw]'></p>
           <div className='flex items-end'>
             <div className='flex justify-center flex-1'>
               <div className='flex items-end'>
