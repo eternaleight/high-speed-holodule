@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 
 class TypeWriter extends React.PureComponent {
   constructor(props) {
     super(props);
 
     this.state = {
-      text: ""
+      text: ''
     };
 
     this.tick = this.tick.bind(this);
@@ -32,7 +32,7 @@ class TypeWriter extends React.PureComponent {
     const i = this.loopNum % toRotate.length;
     const fullTxt = toRotate[i];
 
-    let newText = "";
+    let newText = '';
     if (this.isDeleting) {
       newText = fullTxt.substring(0, this.state.text.length - 1);
     } else {
@@ -48,7 +48,7 @@ class TypeWriter extends React.PureComponent {
     if (!this.isDeleting && newText === fullTxt) {
       delta = this.period;
       this.isDeleting = true;
-    } else if (this.isDeleting && newText === "") {
+    } else if (this.isDeleting && newText === '') {
       this.isDeleting = false;
       this.loopNum++;
       delta = 500;
@@ -62,7 +62,7 @@ class TypeWriter extends React.PureComponent {
   }
 
   render() {
-    return <span className="typewriter">{this.state.text}</span>;
+    return <span className='typewriter'>{this.state.text}</span>;
   }
 }
 
