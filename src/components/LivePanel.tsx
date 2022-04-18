@@ -7,7 +7,8 @@ type Props = {
   holoData: Api[]
 }
 
-const Live: React.VFC<Props> = (props) => {
+// eslint-disable-next-line react/display-name
+const Live: React.VFC<Props> = React.memo((props) => {
   const style = {
     panel: `hover:shadow-[0_0px_0px_1px_#f00] flex-1 object-cover 
     cursor-pointer opacity-[0.2] mr-1 mt-1 hover:opacity-[0.8] 
@@ -69,5 +70,5 @@ const Live: React.VFC<Props> = (props) => {
       </h2>
     </div>
   )
-}
+})
 export default Live

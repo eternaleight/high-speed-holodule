@@ -1,9 +1,11 @@
+import React from "react"
 
 type Props = {
   classToggle: VoidFunction,
 }
 
-export const PanelButton: React.VFC<Props> = ({classToggle}) => {
+// eslint-disable-next-line react/display-name
+export const PanelButton: React.VFC<Props> = React.memo(({classToggle}) => {
   return (
       <div className='flex flex-wrap w-[80px]'>
         <button type='button' className='nav-button' onClick={classToggle}></button>
@@ -38,4 +40,4 @@ export const PanelButton: React.VFC<Props> = ({classToggle}) => {
         <button type='button' className='nav-button2' onClick={classToggle}></button>
       </div>
   )
-}
+})

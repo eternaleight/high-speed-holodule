@@ -1,8 +1,11 @@
+import React from "react"
+
 type Props = {
   classToggle: VoidFunction
 }
 
-const Button: React.VFC<Props> = ({ classToggle }) => {
+// eslint-disable-next-line react/display-name
+const Button: React.VFC<Props> = React.memo(({ classToggle }) => {
   return (
     <div className='flex w-[80px] flex-wrap'>
       <button type='button' className='nav-button' onClick={classToggle}></button>
@@ -37,5 +40,5 @@ const Button: React.VFC<Props> = ({ classToggle }) => {
       <button type='button' className='nav-button2' onClick={classToggle}></button>
     </div>
   )
-}
+})
 export default Button

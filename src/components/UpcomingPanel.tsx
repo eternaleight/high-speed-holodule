@@ -8,7 +8,8 @@ type Props = {
   active5: boolean
 }
 
-const UpcomingPanel: React.VFC<Props> = (props) => {
+// eslint-disable-next-line react/display-name
+const UpcomingPanel: React.VFC<Props> = React.memo((props) => {
   const youtube_jpeg_size = {
     large: '/maxresdefault.jpg',
     midium: '/sddefault.jpg',
@@ -72,5 +73,5 @@ const UpcomingPanel: React.VFC<Props> = (props) => {
       </h2>
     </div>
   )
-}
+})
 export default UpcomingPanel
