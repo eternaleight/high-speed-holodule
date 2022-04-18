@@ -1,7 +1,5 @@
 import { useCallback, useEffect, useState } from 'react'
-import Link from 'next/link'
 import Button from '@mui/material/Button'
-import Image from 'next/image'
 import HoloButton from './HoloButton'
 import TypeWriter from './Typewriter'
 import LivePanel from './LivePanel'
@@ -38,28 +36,7 @@ const Main: React.VFC = () => {
   const [holoData2, setHoloData2] = useState<number[]>([])
   const [active5, setActive5] = useState<boolean>(false)
 
-  // const reducer = (state: any, action: any) => {
-  //   switch (action.type) {
-  //     case 'ACTIVE':
-  //       return {toggle: setActive(!active)}
-  //     case 'ACTIVE2':
-  //       return {toggle: setActive(!active2)}
-  //     case 'ACTIVE3':
-  //       return {toggle: setActive(!active3)}
-  //     default:
-  //       return state;
-  //   }
-  // }
 
-  // const [state, dispatch] = useReducer(reducer, {toggle: false})
-
-  //   const classToggle4 = useCallback(() => {
-  //     setActive4((prev) => prev + 1)
-  //     if (active4 > 3) {
-  //       setActive4((prev2) => prev2 - 4)
-  //     }
-  //   },[active4])
-  //
   const classToggle = useCallback(() => {
     setActive(!active)
   }, [active])
@@ -81,33 +58,6 @@ const Main: React.VFC = () => {
     'ボタンを選ぶと便利なことが起きます⚡️',
   ]
 
-  //const youtube_jpeg_size = {
-  //  large: '/maxresdefault.jpg',
-  //  midium: '/sddefault.jpg'
-  //};
-
-  //const donkey = [
-  //  //Banjyo Kazooie
-  //  'https://www.youtube.com/watch?v=aS40K53JQIg',
-  //  //Stickerbrush Symphony
-  //  //https://www.youtube.com/watch?v=BW3Gbo7bmMI
-  //  //Aquatic Ambience
-  //  'https://www.youtube.com/watch?v=SIQ3DfHrd60',
-  //  //
-  //  'https://www.youtube.com/watch?v=YUIk2PUU2Vg',
-  //  //
-  //  'https://www.youtube.com/watch?v=dIKdZ2827rM',
-  //  //
-  //  'https://www.youtube.com/watch?v=hReWJwH8J0c',
-  //  //kirinomori
-  //  'https://www.youtube.com/watch?v=AnEfB1F9BaY',
-  //]
-
-  //// const channelId = 'https://www.youtube.com/channel/'
-
-  //const youtube_jpeg = 'https://img.youtube.com/vi/'
-  //const youtube = donkey[Math.floor(Math.random() * donkey.length)]
-  //const youtube_id = youtube.slice(32)
   const holoVideo = 'https://www.youtube.com/watch?v='
   const holoUrl = 'https://holodex.net/api/v2/live/'
   const holoUrl2 = 'https://api.holotools.app/v1/videos/'
@@ -208,7 +158,6 @@ const Main: React.VFC = () => {
                       {/*   ⚡️💡:2 */}
                       {/* </Button> */}
                     </div>
-                    {/* <Link href={youtube}><img className='rounded-[10px] mt-[50px] mr-3 w-[8em] h-[4.8em] md:mt-[100px] md:w-[8em] md:h-[4.8em] hover:cursor-pointer opacity-20 hover:opacity-80 object-cover duration-300 max-md:invisible' src={`${youtube_jpeg}${youtube_id}${(youtube_id !== 'SIQ3DfHrd60') ? youtube_jpeg_size.large : youtube_jpeg_size.midium}`} /></Link> */}
                   </div>
                 </div>
                 <div className='flex flex-wrap pt-5'></div>
@@ -229,7 +178,6 @@ const Main: React.VFC = () => {
           <div className='flex items-end'>
             <div className='flex justify-center flex-1'>
               <div className='flex items-end'>
-                {/* <Image className='' src='/download-2.webp' width={50} height={50}/> */}
                 <div className='flex flex-col'>
                   <p className='font1 ml-[clamp(16px,9.5vw,36px)]  mr-[-110px] mb-[200px] w-[70px] rounded-[1rem] bg-[#ffffff11] p-[2px] text-center text-[10px] text-slate-300 md:ml-12 md:w-[100px] md:p-[3px] md:text-[14px]'>
                     commingsoon!!
