@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState } from 'react'
+import Image from 'next/image'
 import Button from '@mui/material/Button'
 import HoloButton from './HoloButton'
 import TypeWriter from './Typewriter'
@@ -105,13 +106,13 @@ const Main: React.VFC = () => {
             holoDatas.channel.id !== '' &&
             holoDatas.channel.id !== 'UCWsfcksUUpoEvhia0_ut0bA' ? (
             <div>
-              <img
+              <Image width={100} height={100}
                 key={holoDatas.id}
                 onClick={() => window.open(`${holoVideo}${holoDatas.id}`)}
                 className='w-[100px] cursor-pointer'
                 src={holoDatas.channel.photo}
               />
-              <p className='w-[300px] text-[14px] text-white'>{holoDatas.title}</p>
+              <p className='w-[300px] mt-[-6px] text-[14px] text-white'>{holoDatas.title}</p>
             </div>
           ) : null
         })}
