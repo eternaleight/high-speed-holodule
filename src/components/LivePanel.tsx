@@ -30,7 +30,7 @@ const Live: React.VFC<Props> = React.memo((props) => {
 
   return (
     <div>
-      <li className='flex flex-wrap items-center rounded-full px-[10px] md:w-[50vw]'>
+      <li className="flex flex-wrap items-center rounded-full px-[10px] md:w-[50vw]">
         {props.holoData.map((holoDatas: Api) => {
           return holoDatas.channel.org === 'Hololive' &&
             holoDatas.status === 'live' &&
@@ -54,18 +54,19 @@ const Live: React.VFC<Props> = React.memo((props) => {
               onClick={() => window.open(`https://www.youtube.com/watch?v=${holoDatas.id}`)}
               key={holoDatas.id}
               className={`${!props.active ? style.panel : style.panel2}
-                ${!props.active3 ? style.panel : style.panel3_light}`}
-              src={
-                holoDatas.channel.id === 'UCvaTdHTWBGv3MKj3KVqJVCw'
-                  ? youtube_jpeg + holoDatas.id + youtube_jpeg_size.midium
-                  : youtube_jpeg + holoDatas.id + youtube_jpeg_size.large
-              }
+                  ${!props.active3 ? style.panel : style.panel3_light}`}
+              src={youtube_jpeg + holoDatas.id + youtube_jpeg_size.large}
             />
           ) : // src={youtube_jpeg + holoDatas.id + youtube_jpeg_size.large} />
+          // src={
+          //   holoDatas.channel.id === 'UCvaTdHTWBGv3MKj3KVqJVCw'
+          //     ? youtube_jpeg + holoDatas.id + youtube_jpeg_size.midium
+          //     : youtube_jpeg + holoDatas.id + youtube_jpeg_size.large
+          // }
           null
         })}
       </li>
-      <h2 className='mt-1 mb-6 ml-3 text-[clamp(15px,1.5vw,18px)] text-white opacity-20 hover:opacity-80 max-sm:text-[12px]'>
+      <h2 className="mt-1 mb-6 ml-3 text-[clamp(15px,1.5vw,18px)] text-white opacity-20 hover:opacity-80 max-sm:text-[12px]">
         放送中
       </h2>
     </div>
