@@ -16,14 +16,14 @@ body {
   width: 50px;
   height: 2px;
   color: #fff;
-  cursor: pointer;
+  cursor: default;
   &::before {
     content: '';
     display: block;
     width: 40px;
     height: 2px;
     background-color: #2e5180;
-    cursor: pointer;
+    cursor: default;
   }
 }
 
@@ -33,14 +33,14 @@ body {
   width: 50px;
   height: 2px;
   color: #fff;
-  cursor: pointer;
+  cursor: default;
   &::before {
     content: '';
     display: block;
     width: 40px;
     height: 2px;
     background-color: #888;
-    cursor: pointer;
+    cursor: default;
   }
 } 
 
