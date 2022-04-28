@@ -1,4 +1,4 @@
-# Next.js + TypeScript + Tailwind + CSS Example
+# Next.js + TypeScript + Tailwind + SCSS Example
 
 ```
 module.exports = {
