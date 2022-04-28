@@ -54,8 +54,8 @@ const Main: React.VFC = () => {
   }, [active5])
 
   const typeWriter = [
-    "ボタンを押してLet's カスタマイズ !!",
-    'ボタンを選ぶと便利なことが起きます⚡️',
+    "ボタンを押してLet's カスタマイズ!!(準備中)",
+    'ボタンを選ぶと便利なことが起きます⚡️(準備中)',
   ]
 
   const holoVideo = 'https://www.youtube.com/watch?v='
@@ -127,7 +127,6 @@ const Main: React.VFC = () => {
             <li className='gap-1 pt-[0.25rem] pb-[10px]'>
               <br />
               <div className=''>
-                pointer
                 <div className='flex justify-around'>
                   <ul className='md:flex'>
                     <LivePanel holoData={holoData} active={active} active3={active3} />
@@ -185,14 +184,17 @@ const Main: React.VFC = () => {
                   <p className='font1 ml-[clamp(16px,9.5vw,36px)]  mr-[-110px] mb-[200px] w-[70px] rounded-[1rem] bg-[#ffffff11] p-[2px] text-center text-[10px] text-slate-300 md:ml-12 md:w-[100px] md:p-[3px] md:text-[14px]'>
                     commingsoon!!
                   </p>
-                  <div className='absolute ml-[70px] md:ml-[100px] top-[230px]'>
-                    <p className='absolute z-10 text-[8px] top-[90px]'>タッチで
-                      サムネイル<br/>を拡大</p>
-                  <Image src='/pointer2.png' width={50} height={130}/>
-                </div>
+                  <div className='absolute top-[230px] ml-[70px] md:ml-[100px]'>
+                    <p className='absolute top-[90px] z-10 text-[8px]'>
+                      タッチで サムネイル
+                      <br />
+                      を拡大
+                    </p>
+                    <Image src='/pointer2.png' width={50} height={130} />
+                  </div>
                   <p className='ml-4 text-[30px] md:mr-1'>💻</p>
                 </div>
-                <div className='mr-1 w-[90px] rounded-full bg-[#111111aa] p-2 text-[0.5rem] text-white sm:text-[12px] md:w-[auto]'>
+                <div className='mr-1 w-[90px] rounded-full bg-[#111111aa] p-2 text-[0.5rem] text-white md:w-[auto] md:text-[12px]'>
                   <TypeWriter data={typeWriter} />
                 </div>
               </div>
