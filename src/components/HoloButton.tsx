@@ -8,7 +8,7 @@ type Props = {
 // eslint-disable-next-line react/display-name
 const HoloButton: React.VFC<Props> = React.memo(({ classToggle2 }) => {
   return (
-    <div className='pacity-90 flex w-[230px]  flex-wrap'>
+    <div className='opacity-90 flex w-[230px]  flex-wrap'>
       <Button className='mx-1 mb-1' variant='outlined' size='small' onClick={classToggle2}>
         🛸💜
       </Button>
