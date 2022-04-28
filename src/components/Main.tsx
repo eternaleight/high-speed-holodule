@@ -5,7 +5,7 @@ import HoloButton from './HoloButton'
 import TypeWriter from './Typewriter'
 import LivePanel from './LivePanel'
 import UpcomingPanel from './UpcomingPanel'
-import PanelButton from './Button'
+import TabButton from './TabButton'
 
 export type Api = {
   available_at: string
@@ -37,7 +37,6 @@ const Main: React.VFC = () => {
   const [holoData2, setHoloData2] = useState<number[]>([])
   const [active5, setActive5] = useState<boolean>(false)
 
-
   const classToggle = useCallback(() => {
     setActive(!active)
   }, [active])
@@ -55,7 +54,7 @@ const Main: React.VFC = () => {
   }, [active5])
 
   const typeWriter = [
-    'ボタンを押してLet\'s カスタマイズ !!',
+    "ボタンを押してLet's カスタマイズ !!",
     'ボタンを選ぶと便利なことが起きます⚡️',
   ]
 
@@ -106,13 +105,15 @@ const Main: React.VFC = () => {
             holoDatas.channel.id !== '' &&
             holoDatas.channel.id !== 'UCWsfcksUUpoEvhia0_ut0bA' ? (
             <div>
-              <Image width={100} height={100}
+              <Image
+                width={100}
+                height={100}
                 key={holoDatas.id}
                 onClick={() => window.open(`${holoVideo}${holoDatas.id}`)}
                 className='w-[100px] cursor-pointer'
                 src={holoDatas.channel.photo}
               />
-              <p className='w-[300px] mt-[-6px] text-[14px] text-white'>{holoDatas.title}</p>
+              <p className='mt-[-6px] w-[300px] text-[14px] text-white'>{holoDatas.title}</p>
             </div>
           ) : null
         })}
@@ -126,6 +127,7 @@ const Main: React.VFC = () => {
             <li className='gap-1 pt-[0.25rem] pb-[10px]'>
               <br />
               <div className=''>
+                pointer
                 <div className='flex justify-around'>
                   <ul className='md:flex'>
                     <LivePanel holoData={holoData} active={active} active3={active3} />
@@ -137,7 +139,7 @@ const Main: React.VFC = () => {
                     />
                   </ul>
                   <div className='max-h-[500px]'>
-                    <PanelButton classToggle={classToggle} />
+                    <TabButton classToggle={classToggle} />
                     <div className='mt-[10px] flex h-[140px] w-[10px] flex-col opacity-80'>
                       <Button
                         className='mb-1'

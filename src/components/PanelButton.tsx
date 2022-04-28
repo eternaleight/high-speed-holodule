@@ -1,43 +1,45 @@
-import React from "react"
+import React from 'react'
 
 type Props = {
-  classToggle: VoidFunction,
+  classToggle: VoidFunction
 }
 
 // eslint-disable-next-line react/display-name
-export const PanelButton: React.VFC<Props> = React.memo(({classToggle}) => {
+const TabButton: React.VFC<Props> = React.memo(({ classToggle }) => {
   return (
-      <div className='flex flex-wrap w-[80px]'>
-        <button type='button' className='nav-button' onClick={classToggle}></button>
-        <button type='button' className='nav-button' onClick={classToggle}></button>
-        <button type='button' className='nav-button' onClick={classToggle}></button>
-        <button type='button' className='nav-button' onClick={classToggle}></button>
-        <button type='button' className='nav-button' onClick={classToggle}></button>
-        <button type='button' className='nav-button' onClick={classToggle}></button>
-        <button type='button' className='nav-button' onClick={classToggle}></button>
-        <button type='button' className='nav-button' onClick={classToggle}></button>
-        <button type='button' className='nav-button' onClick={classToggle}></button>
-        <button type='button' className='nav-button' onClick={classToggle}></button>
-        <button type='button' className='nav-button' onClick={classToggle}></button>
-        <button type='button' className='nav-button' onClick={classToggle}></button>
-        <button type='button' className='nav-button' onClick={classToggle}></button>
-        <button type='button' className='nav-button' onClick={classToggle}></button>
-        <button type='button' className='nav-button' onClick={classToggle}></button>
-        <button type='button' className='nav-button' onClick={classToggle}></button>
-        <button type='button' className='nav-button' onClick={classToggle}></button>
-        <button type='button' className='nav-button' onClick={classToggle}></button>
-        <button type='button' className='nav-button' onClick={classToggle}></button>
-        <button type='button' className='nav-button' onClick={classToggle}></button>
-        <button type='button' className='nav-button' onClick={classToggle}></button>
-        <button type='button' className='nav-button' onClick={classToggle}></button>
-        <button type='button' className='nav-button' onClick={classToggle}></button>
-        <button type='button' className='nav-button' onClick={classToggle}></button>
-        <button type='button' className='nav-button2' onClick={classToggle}></button>
-        <button type='button' className='nav-button2' onClick={classToggle}></button>
-        <button type='button' className='nav-button2' onClick={classToggle}></button>
-        <button type='button' className='nav-button2' onClick={classToggle}></button>
-        <button type='button' className='nav-button2' onClick={classToggle}></button>
-        <button type='button' className='nav-button2' onClick={classToggle}></button>
-      </div>
+    <div className='flex w-[80px] flex-wrap'>
+      <button type='button' className='nav-button' onClick={classToggle}></button>
+      <button type='button' className='nav-button' onClick={classToggle}></button>
+      <button type='button' className='nav-button' onClick={classToggle}></button>
+      <button type='button' className='nav-button' onClick={classToggle}></button>
+      <button type='button' className='nav-button' onClick={classToggle}></button>
+      <button type='button' className='nav-button' onClick={classToggle}></button>
+      <button type='button' className='nav-button' onClick={classToggle}></button>
+      <button type='button' className='nav-button' onClick={classToggle}></button>
+      <button type='button' className='nav-button' onClick={classToggle}></button>
+      <button type='button' className='nav-button' onClick={classToggle}></button>
+      <button type='button' className='nav-button' onClick={classToggle}></button>
+      <button type='button' className='nav-button' onClick={classToggle}></button>
+      <button type='button' className='nav-button' onClick={classToggle}></button>
+      <button type='button' className='nav-button' onClick={classToggle}></button>
+      <button type='button' className='nav-button' onClick={classToggle}></button>
+      <button type='button' className='nav-button' onClick={classToggle}></button>
+      <button type='button' className='nav-button' onClick={classToggle}></button>
+      <button type='button' className='nav-button' onClick={classToggle}></button>
+      <button type='button' className='nav-button' onClick={classToggle}></button>
+      <button type='button' className='nav-button' onClick={classToggle}></button>
+      <button type='button' className='nav-button' onClick={classToggle}></button>
+      <button type='button' className='nav-button' onClick={classToggle}></button>
+      <button type='button' className='nav-button' onClick={classToggle}></button>
+      <button type='button' className='nav-button' onClick={classToggle}></button>
+      <button type='button' className='nav-button2' onClick={classToggle}></button>
+      <button type='button' className='nav-button2' onClick={classToggle}></button>
+      <button type='button' className='nav-button2' onClick={classToggle}></button>
+      <button type='button' className='nav-button2' onClick={classToggle}></button>
+      <button type='button' className='nav-button2' onClick={classToggle}></button>
+      <button type='button' className='nav-button2' onClick={classToggle}></button>
+    </div>
   )
 })
+
+export default TabButton
