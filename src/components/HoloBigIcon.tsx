@@ -23,7 +23,7 @@ const HoloBigIcon:React.FC = () => (
             </WorkLeft>
             <WorkRight progress={progress}>
               <div className='max-lg:relative max-lg:-top-32'>
-              <Image src='/assets/holo/aqua.png' layout='responsive' width={284} height={534} alt='Pink Panda' />
+              <Image src='/assets/holo/aqua.png' layout='responsive' width={284} height={534} alt='Minato aqua' />
               </div>
             </WorkRight>
           </WorkContainer>
@@ -39,8 +39,8 @@ const HoloBigIcon:React.FC = () => (
               <WorkLink href='https://www.youtube.com/channel/UC1CfXB_kRs3C-zaeTG3oGyg'>赤井はあと</WorkLink>&nbsp;Akai haato</div>
             </WorkLeft>
             <WorkRight progress={progress}>
-              <div className='max-lg:relative max-lg:-top-32'>
-              <Image src='/assets/holo/haato.png' layout='responsive' width={230} height={463} alt='Steakwallet' />
+              <div className='max-lg:relative max-lg:-top-28'>
+              <Image src='/assets/holo/haato.png' layout='responsive' width={230} height={463} alt='Akai haato' />
               </div>
             </WorkRight>
           </WorkContainer>
@@ -57,8 +57,8 @@ const HoloBigIcon:React.FC = () => (
             </WorkLeft>
             <WorkRight progress={progress}>
               <div className='scale-[1.18]'>
-              <div className='max-lg:relative max-lg:-top-12'>
-              <Image src='/assets/holo/shion.png' layout='responsive' width={100} height={150} alt='Showtime' />
+              <div className='max-lg:relative max-lg:-top-[74px]'>
+              <Image src='/assets/holo/shion.png' layout='responsive' width={100} height={150} alt='Muraski shion' />
               </div>
               </div>
             </WorkRight>
