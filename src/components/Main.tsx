@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react'
+import { Dispatch, SetStateAction, useCallback, useEffect, useState } from 'react'
 import Image from 'next/image'
 import Button from '@mui/material/Button'
 import HoloButton from './HoloButton'
@@ -29,12 +29,15 @@ export type Api = {
   type: string
 }
 
-const Main: React.VFC = () => {
+export type Props = {
+  setIcon: Dispatch<SetStateAction<boolean>>
+}
+
+const Main: React.VFC<Props> = ({setIcon}) => {
   const [holoData, setHoloData] = useState<Api[]>([])
   const [active, setActive] = useState<boolean>(false)
   const [active2, setActive2] = useState<boolean>(false)
   const [active3, setActive3] = useState<boolean>(false)
-  const [holoData2, setHoloData2] = useState<number[]>([])
   const [active5, setActive5] = useState<boolean>(false)
 
   const classToggle = useCallback(() => {
@@ -73,14 +76,6 @@ const Main: React.VFC = () => {
     HoloApi()
   }, [holoUrl])
 
-  // useEffect(() => {
-  //   ;(async () => {
-  //     const res = await fetch(holoUrl2)
-  //     const users = await res.json()
-  //     setHoloData2(users)
-  //     return res
-  //   })()
-  // }, [holoUrl2])
 
   return (
     <div>
@@ -156,9 +151,9 @@ const Main: React.VFC = () => {
                       >
                         ⚡️💡
                       </Button>
-                      {/* <Button variant='outlined' size='small' onClick={classToggle5}> */}
-                      {/*   ⚡️💡:2 */}
-                      {/* </Button> */}
+                      <Button variant='outlined' size='small' onClick={()=>setIcon(!false)}>
+                    2D 
+                      </Button>
                     </div>
                   </div>
                 </div>
