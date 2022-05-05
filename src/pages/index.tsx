@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import type { NextPage } from 'next'
 import Header from '../components/Header'
 import Main from '../components/Main'
@@ -8,27 +8,28 @@ import { Button } from '@mui/material'
 
 const Home: NextPage = () => {
   const [icon, setIcon] = useState<boolean>(false)
-  const switchIcon = useCallback(() => {
-    setIcon(!icon)
+
+  useEffect(() => {
+    const scrolltop = window.scrollTo(0, 0)
   }, [icon])
 
   return (
     <div>
       <HeadMeta />
       <div className='flex justify-between'>
-        <Header setIcon={setIcon}/>
+        <Header setIcon={setIcon} />
         {/* <Button className='m-2' variant='outlined' size='small' onClick={switchIcon}> */}
         {/*   👀 2d */}
         {/* </Button> */}
       </div>
-      {icon ? 
+      {icon ? (
         <div>
-          <h2 className='text-3xl text-center text-white'>
-          下にScroll↓
-          </h2>
-      <HoloBigIcon />
+          <h2 className='text-3xl text-center text-white'>下にScroll↓</h2>
+          <HoloBigIcon />
         </div>
-      : <Main setIcon={setIcon}/>}
+      ) : (
+        <Main setIcon={setIcon} />
+      )}
     </div>
   )
 }

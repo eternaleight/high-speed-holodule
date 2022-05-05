@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { Tile, TileWrapper, TileContent, TileBackground } from './Tile'
 import { WorkContainer, WorkBackground, WorkLeft, WorkLink, WorkRight } from './Work'
 
-const HoloBigIcon = () => (
+const HoloBigIcon:React.FC = () => (
   <TileWrapper numOfPages={3}>
     <TileBackground>
       <WorkBackground />
