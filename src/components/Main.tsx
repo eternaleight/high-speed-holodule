@@ -152,7 +152,7 @@ const Main: React.VFC<Props> = ({setIcon}) => {
                         ⚡️💡
                       </Button>
                       <Button variant='outlined' size='small' onClick={()=>setIcon(!false)}>
-                    2D 
+                    🌏
                       </Button>
                     </div>
                   </div>

@@ -49,7 +49,7 @@ const HoloBigIcon = () => (
              <WorkLink href='https://www.youtube.com/channel/UCXTpFs_3PqI41qX2d9tL2Rw'>紫咲シオン</WorkLink>&nbsp;Murasaki shion</div>
             </WorkLeft>
             <WorkRight progress={progress}>
-              <div className='scale-[1.28]'>
+              <div className='scale-[1.18]'>
               <Image src='/assets/holo/shion.png' layout='responsive' width={100} height={150} alt='Showtime' />
               </div>
             </WorkRight>
