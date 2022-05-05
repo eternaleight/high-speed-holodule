@@ -24,7 +24,7 @@ const Home: NextPage = () => {
       </div>
       {icon ? (
         <div>
-          <h2 className='text-3xl text-center text-white'>下にScroll↓</h2>
+          <h2 className='text-3xl text-center text-white animate-pulse2 animate-bounce2'>Scroll down↓</h2>
           <HoloBigIcon />
         </div>
       ) : (

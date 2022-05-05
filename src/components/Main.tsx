@@ -151,8 +151,10 @@ const Main: React.VFC<Props> = ({setIcon}) => {
                       >
                         ⚡️💡
                       </Button>
-                      <Button variant='outlined' size='small' onClick={()=>setIcon(!false)}>
-                    👀 🌏
+                      <Button
+                        className='mb-1'
+                        variant='outlined' size='small' onClick={()=>setIcon(!false)}>
+                   holo rpg
                       </Button>
                     </div>
                   </div>

@@ -2,6 +2,8 @@ import React from 'react'
 import Image from 'next/image'
 import { Tile, TileWrapper, TileContent, TileBackground } from './Tile'
 import { WorkContainer, WorkBackground, WorkLeft, WorkLink, WorkRight } from './Work'
+import Rating from './Rating'
+
 
 const HoloBigIcon:React.FC = () => (
   <TileWrapper numOfPages={3}>
@@ -9,6 +11,7 @@ const HoloBigIcon:React.FC = () => (
       <WorkBackground />
     </TileBackground>
     <TileContent>
+      <Rating/>
       <Tile
         page={0}
         renderContent={({ progress }) => (
@@ -44,8 +47,8 @@ const HoloBigIcon:React.FC = () => (
         renderContent={({ progress }) => (
           <WorkContainer>
             <WorkLeft progress={progress}>
-              <div className='pl-6'>hololive 2期生</div>
-              <div className='pl-6 text-4xl font-semibold tracking-tight md:text-5xl'>
+              <div className='pl-8'>hololive 2期生</div>
+              <div className='pl-8 text-4xl font-semibold tracking-tight md:text-5xl'>
              <WorkLink href='https://www.youtube.com/channel/UCXTpFs_3PqI41qX2d9tL2Rw'>紫咲シオン</WorkLink>&nbsp;Murasaki shion</div>
             </WorkLeft>
             <WorkRight progress={progress}>

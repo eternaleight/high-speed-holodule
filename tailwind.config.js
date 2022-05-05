@@ -25,7 +25,13 @@ module.exports = {
       'max-md': {'max': '767px'},
       'max-sm': {'max': '639px'},
     },
-    extend: {},
+    extend: {
+      animation: {
+        'spin-slow': 'spin 3s linear infinite',
+        'pulse2': 'pulse 3.8s linear infinite',
+        'bounce2': 'bounce 2.2s linear infinite'
+      }
+    },
   },
   plugins: [],
   important: true,
