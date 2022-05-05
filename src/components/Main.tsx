@@ -137,6 +137,11 @@ const Main: React.VFC<Props> = ({setIcon}) => {
                     <div className='mt-[10px] flex h-[140px] w-[10px] flex-col opacity-80'>
                       <Button
                         className='mb-1'
+                        variant='outlined' size='small' onClick={()=>setIcon(!false)}>
+                   holo rpg
+                      </Button>
+                      <Button
+                        className='mb-1'
                         variant='outlined'
                         size='small'
                         onClick={classToggle2}
@@ -150,11 +155,6 @@ const Main: React.VFC<Props> = ({setIcon}) => {
                         onClick={classToggle3}
                       >
                         ⚡️💡
-                      </Button>
-                      <Button
-                        className='mb-1'
-                        variant='outlined' size='small' onClick={()=>setIcon(!false)}>
-                   holo rpg
                       </Button>
                     </div>
                   </div>
