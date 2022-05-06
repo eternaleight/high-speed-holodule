@@ -114,15 +114,15 @@ const HoloBigIcon: React.FC = () => (
         renderContent={({ progress }) => (
           <WorkContainer>
             <WorkLeft progress={progress}>
-              <div className='md:pl-[4.8vw]'>hololive 2期生</div>
-              <div className='text-4xl font-semibold tracking-tight md:pl-[4.8vw] md:text-5xl'>
+              <div className='md:pl-[4.8vw] max-md:pl-3'>hololive 2期生</div>
+              <div className='text-4xl pl-3 font-semibold tracking-tight md:pl-[4.8vw] md:text-5xl'>
                 <WorkLink href='https://www.youtube.com/channel/UCXTpFs_3PqI41qX2d9tL2Rw'>
                   紫咲シオン
                 </WorkLink>
                 &nbsp;Murasaki shion
               </div>
               <div className='relative'>
-                <span className='duration-0 absolute top-1 max-w-[250px] px-1 text-sm opacity-90 hover:z-10 hover:opacity-100 md:left-[5vw]'>
+                <span className='duration-0 max-md:pl-3 absolute top-1 max-w-[250px] px-1 text-sm opacity-90 hover:z-10 hover:opacity-100 md:left-[5vw]'>
                   YouTube Shion Ch. 紫咲シオン
                   <br />
                   ファンの愛称 塩っ子
