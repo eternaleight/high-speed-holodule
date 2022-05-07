@@ -40,7 +40,7 @@ export const WorkRight: React.FC<{
   children?: ReactNode
   progress: number
 }> = ({ children, progress }) => {
-  let translateY = Math.max(-50, -(progress - 0.5) * 50)
+  const translateY = Math.max(-50, -(progress - 0.5) * 50)
   return (
     <div
       className="flex justify-center flex-1 h-screen lg:items-center"
