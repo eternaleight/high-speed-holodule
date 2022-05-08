@@ -4,7 +4,6 @@ import Header from '../components/Header'
 import Main from '../components/Main'
 import { HeadMeta } from '../components/Head'
 import HoloBigIcon from '../components/HoloBigIcon'
-import { Button } from '@mui/material'
 
 const Home: NextPage = () => {
   const [icon, setIcon] = useState<boolean>(false)
@@ -18,9 +17,6 @@ const Home: NextPage = () => {
       <HeadMeta />
       <div className='flex justify-between'>
         <Header setIcon={setIcon} />
-        {/* <Button className='m-2' variant='outlined' size='small' onClick={switchIcon}> */}
-        {/*   👀 2d */}
-        {/* </Button> */}
       </div>
       {icon ? (
         <div>
