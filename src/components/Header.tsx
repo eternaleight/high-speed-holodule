@@ -1,5 +1,4 @@
-import Link from 'next/link'
-import React, { MouseEventHandler } from 'react'
+import React from 'react'
 import type { Props } from './Main'
 
 
