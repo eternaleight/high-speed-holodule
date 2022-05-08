@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction, useCallback, useEffect, useState } from 'react'
+import React, { Dispatch, SetStateAction, useCallback, useEffect, useState } from 'react'
 import Image from 'next/image'
 import Button from '@mui/material/Button'
 import HoloButton from './HoloButton'
@@ -33,7 +33,7 @@ export type Props = {
   setIcon: Dispatch<SetStateAction<boolean>>
 }
 
-const Main: React.VFC<Props> = ({setIcon}) => {
+const Main: React.VFC<Props> = React.memo(({setIcon}) => {
   const [holoData, setHoloData] = useState<Api[]>([])
   const [active, setActive] = useState<boolean>(false)
   const [active2, setActive2] = useState<boolean>(false)
@@ -52,10 +52,6 @@ const Main: React.VFC<Props> = ({setIcon}) => {
     setActive3(!active3)
   }, [active3])
 
-  const classToggle5 = useCallback(() => {
-    setActive5(!active5)
-  }, [active5])
-
   const typeWriter = [
     "ボタンを押してLet's カスタマイズ!!(準備中)",
     'ボタンを選ぶと便利なことが起きます⚡️(準備中)',
@@ -70,7 +66,6 @@ const Main: React.VFC<Props> = ({setIcon}) => {
       const res = await fetch(holoUrl)
       const users = await res.json()
       setHoloData(users)
-      // console.log(users)
       return res
     }
     HoloApi()
@@ -202,6 +197,6 @@ const Main: React.VFC<Props> = ({setIcon}) => {
       </section>
     </div>
   )
-}
+})
 
 export default Main
