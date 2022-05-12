@@ -1,5 +1,3 @@
-import { useState, useEffect } from "react";
-
 const THUMB_TYPES = [
   /** w1280 */
   'maxresdefault.jpg',

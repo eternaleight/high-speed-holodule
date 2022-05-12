@@ -1,4 +1,12 @@
-import React, { Dispatch, SetStateAction, useCallback, useEffect, useState } from 'react'
+import React, {
+  Dispatch,
+  SetStateAction,
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from 'react'
 import Image from 'next/image'
 import Button from '@mui/material/Button'
 import HoloButton from './HoloButton'
@@ -32,12 +40,27 @@ export type Api = {
 export type Props = {
   setIcon: Dispatch<SetStateAction<boolean>>
 }
-   // eslint-disable-next-line react/display-name
-const Main: React.VFC<Props> = React.memo(({setIcon}) => {
+// eslint-disable-next-line react/display-name
+const Main: React.VFC<Props> = React.memo(({ setIcon }) => {
   const [holoData, setHoloData] = useState<Api[]>([])
   const [active, setActive] = useState<boolean>(false)
   const [active2, setActive2] = useState<boolean>(false)
   const [active3, setActive3] = useState<boolean>(false)
+  const refContainer = useRef<HTMLDivElement>(null)
+
+ useMemo(() => console.log(refContainer.current?.classList), [refContainer.current])
+ const ele = document.querySelector('.element')?.classList
+  console.log(ele)
+  const array = [
+    {id: 0, name: 'tarou',item: 'katana'},
+    {id: 1, name: 'jirou', item: 'ball'},
+    {id: 2, name: 'saburou', item: 'onigiri'},
+  ]
+
+  const sss = array.map((maps) => {
+    console.log(maps)
+  })
+
 
   const classToggle = useCallback(() => {
     setActive(!active)
@@ -58,16 +81,14 @@ const Main: React.VFC<Props> = React.memo(({setIcon}) => {
 
   const holoVideo = 'https://www.youtube.com/watch?v='
   const holoUrl = 'https://holodex.net/api/v2/live/'
-  const holoUrl2 = 'https://api.holotools.app/v1/videos/'
 
   useEffect(() => {
-    (async () => {
+    ;(async () => {
       const res = await fetch(holoUrl)
       const users = await res.json()
       setHoloData(users)
-     })()
+    })()
   }, [holoUrl])
-
 
   return (
     <div>
@@ -105,7 +126,10 @@ const Main: React.VFC<Props> = React.memo(({setIcon}) => {
           ) : null
         })}
       </div>
-      <div className='text-size-1 bg-slate-900 text-[10px] text-slate-200 duration-300 hover:cursor-pointer hover:bg-blue-700 hover:text-slate-100'>
+      <div
+        ref={refContainer}
+        className='element text-size-1 bg-slate-900 text-[10px] text-slate-200 duration-300 hover:cursor-pointer hover:bg-blue-700 hover:text-slate-100'
+      >
         Main
       </div>
       <div>
@@ -117,19 +141,18 @@ const Main: React.VFC<Props> = React.memo(({setIcon}) => {
                 <div className='flex justify-around'>
                   <ul className='md:flex'>
                     <LivePanel holoData={holoData} active={active} active3={active3} />
-                    <UpcomingPanel
-                      holoData={holoData}
-                      active={active}
-                      active3={active3}
-                    />
+                    <UpcomingPanel holoData={holoData} active={active} active3={active3} />
                   </ul>
                   <div className='max-h-[500px]'>
                     <TabButton classToggle={classToggle} />
                     <div className='mt-[10px] flex h-[140px] w-[10px] flex-col opacity-80'>
                       <Button
                         className='mb-1'
-                        variant='outlined' size='small' onClick={()=>setIcon(!false)}>
-                   holo rpg
+                        variant='outlined'
+                        size='small'
+                        onClick={() => setIcon(!false)}
+                      >
+                        holo rpg
                       </Button>
                       <Button
                         className='mb-1'
