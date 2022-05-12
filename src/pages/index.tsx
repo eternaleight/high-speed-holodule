@@ -9,7 +9,7 @@ const Home: NextPage = () => {
   const [icon, setIcon] = useState<boolean>(false)
 
   useEffect(() => {
-    const scrolltop = window.scrollTo(0, 0)
+    window.scrollTo(0, 0)
   }, [icon])
 
   return (

@@ -5,7 +5,6 @@ type Props = {
   active: boolean
   active3: boolean
   holoData: Api[]
-  active5: boolean
 }
 
 // eslint-disable-next-line react/display-name

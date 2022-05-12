@@ -32,13 +32,12 @@ export type Api = {
 export type Props = {
   setIcon: Dispatch<SetStateAction<boolean>>
 }
-
+   // eslint-disable-next-line react/display-name
 const Main: React.VFC<Props> = React.memo(({setIcon}) => {
   const [holoData, setHoloData] = useState<Api[]>([])
   const [active, setActive] = useState<boolean>(false)
   const [active2, setActive2] = useState<boolean>(false)
   const [active3, setActive3] = useState<boolean>(false)
-  const [active5, setActive5] = useState<boolean>(false)
 
   const classToggle = useCallback(() => {
     setActive(!active)
@@ -62,13 +61,11 @@ const Main: React.VFC<Props> = React.memo(({setIcon}) => {
   const holoUrl2 = 'https://api.holotools.app/v1/videos/'
 
   useEffect(() => {
-    async function HoloApi() {
+    (async () => {
       const res = await fetch(holoUrl)
       const users = await res.json()
       setHoloData(users)
-      return res
-    }
-    HoloApi()
+     })()
   }, [holoUrl])
 
 
@@ -124,7 +121,6 @@ const Main: React.VFC<Props> = React.memo(({setIcon}) => {
                       holoData={holoData}
                       active={active}
                       active3={active3}
-                      active5={active5}
                     />
                   </ul>
                   <div className='max-h-[500px]'>
