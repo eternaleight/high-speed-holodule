@@ -48,18 +48,36 @@ const Main: React.VFC<Props> = React.memo(({ setIcon }) => {
   const [active3, setActive3] = useState<boolean>(false)
   const refContainer = useRef<HTMLDivElement>(null)
 
- useMemo(() => console.log(refContainer.current?.classList), [refContainer.current])
- const ele = document.querySelector('.element')?.classList
-  console.log(ele)
-  const array = [
-    {id: 0, name: 'tarou',item: 'katana'},
-    {id: 1, name: 'jirou', item: 'ball'},
-    {id: 2, name: 'saburou', item: 'onigiri'},
-  ]
+ // useMemo(() => console.log(refContainer.current?.classList), [refContainer.current])
+ // const ele = document.querySelector('.element')?.classList
+ //  console.log(ele)
+ //  const array = [
+ //    {id: 0, name: 'tarou',item: 'katana'},
+ //    {id: 1, name: 'jirou', item: 'ball'},
+ //    {id: 2, name: 'saburou', item: 'onigiri'},
+ //  ]
 
-  const sss = array.map((maps) => {
-    console.log(maps)
-  })
+  // const sss = array.map((maps) => {
+  //   console.log(maps)
+  // })
+  //
+
+  const aaa = (e:any) => {
+    console.log(e.target)
+  }
+
+  const handle = (e:any) => {
+    if (refContainer.current?.contains(e.target)) {
+      console.log(document.getElementsByClassName('lll'))
+     console.log(e.screenX)
+    console.log(refContainer)
+    }
+  }
+  
+  useEffect(() => {
+    document.addEventListener('click',handle)
+    return () => document.removeEventListener('click',handle)
+  },[])
 
 
   const classToggle = useCallback(() => {
@@ -128,7 +146,7 @@ const Main: React.VFC<Props> = React.memo(({ setIcon }) => {
       </div>
       <div
         ref={refContainer}
-        className='element text-size-1 bg-slate-900 text-[10px] text-slate-200 duration-300 hover:cursor-pointer hover:bg-blue-700 hover:text-slate-100'
+        className='lll element text-size-1 bg-slate-900 text-[10px] text-slate-200 duration-300 hover:cursor-pointer hover:bg-blue-700 hover:text-slate-100'
       >
         Main
       </div>
