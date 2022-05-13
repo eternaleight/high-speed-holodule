@@ -62,15 +62,16 @@ const Main: React.VFC<Props> = React.memo(({ setIcon }) => {
   // })
   //
 
+
   const aaa = (e:any) => {
     console.log(e.target)
   }
 
   const handle = (e:any) => {
     if (refContainer.current?.contains(e.target)) {
-      console.log(document.getElementsByClassName('lll'))
-     console.log(e.screenX)
-    console.log(refContainer)
+      // console.log(document.getElementsByClassName('lll'))
+     // console.log(e.target.innerText)
+    console.log(refContainer.current)
     }
   }
   
