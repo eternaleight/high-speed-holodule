@@ -68,17 +68,17 @@ const Main: React.VFC<Props> = React.memo(({ setIcon }) => {
     })()
   }, [holoUrl])
 
-  useEffect(() => {
-    const f = fetch(holoUrl2)
-    .then((responce) => {
-      return responce.json()
-    })
-    .then((response) => {
-       response.videos.map((maps: any) => {
-        return console.log(maps)
-      })
-  })
-}, [])
+  // useEffect(() => {
+  //   const f = fetch(holoUrl2)
+  //   .then((responce) => {
+  //     return responce.json()
+  //   })
+  //   .then((response) => {
+  //      response.videos.map((maps: any) => {
+  //       return console.log(maps)
+  //     })
+  // })
+// }, [])
 
 
 return (
