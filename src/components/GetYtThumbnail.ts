@@ -13,10 +13,10 @@ const THUMB_TYPES = [
   'default.jpg',
 ];
 
-export const getYtThumbnail = async (videoId: any) => {
+export const getYtThumbnail = async (videoId: string) => {
   // 画像をロードする処理
   const loadImage = (src: string) => {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
       const img = new Image();
       img.onload = (e) => resolve(img);
       img.src = src;
