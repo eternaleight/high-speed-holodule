@@ -172,7 +172,7 @@ return (
         <div className={`${active2 ? 'blur-box' : 'none'}`}></div>
       </div>
       <div onClick={classToggle2} className={`${active2 ? 'hover-text2' : 'none'}`}>
-        <div onClick={classToggle2} className='ml-[95vw] cursor-pointer max-sm:text-[2.5vw]'>
+        <div onClick={classToggle2} className='cursor-default ml-[95vw] max-sm:text-[2.5vw]'>
           ×
         </div>
         <p className='max-sm:text-[2.5vw]'></p>
@@ -180,9 +180,6 @@ return (
           <div className='flex justify-center flex-1'>
             <div className='flex items-end'>
               <div className='flex flex-col'>
-                <p className='font1 ml-[clamp(16px,9.5vw,36px)]  mr-[-110px] mb-[200px] w-[70px] rounded-[1rem] bg-[#ffffff11] p-[2px] text-center text-[10px] text-slate-300 md:ml-12 md:w-[100px] md:p-[3px] md:text-[14px]'>
-                  commingsoon!!
-                </p>
                 <div className='absolute top-[230px] ml-[70px] md:ml-[100px]'>
                   <p className='absolute top-[90px] z-10 text-[8px]'>
                     タッチで サムネイル
