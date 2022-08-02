@@ -102,6 +102,11 @@ return (
           holoDatas.channel.id !== 'UCkT1u65YS49ca_LsFwcTakw' &&
           holoDatas.channel.id !== 'UCdfMHxjcCc2HSd9qFvfJgjg' &&
           holoDatas.channel.id !== '' &&
+          holoDatas.channel.id !== 'UCyxtGMdWlURZ30WSnEjDOQw' &&
+          holoDatas.channel.id !== 'UC7MMNHR-kf9EN1rXiesMTMw' &&
+          holoDatas.channel.id !== 'UC2hx0xVkMoHGWijwr_lA01w' &&
+          holoDatas.channel.id !== 'UCDRWSO281bIHYVi-OV3iFYA' &&
+          holoDatas.channel.id !== '' &&
           holoDatas.channel.id !== 'UCWsfcksUUpoEvhia0_ut0bA' ? (
             <div>
               <Image
