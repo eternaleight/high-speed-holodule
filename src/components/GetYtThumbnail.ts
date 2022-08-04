@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react'
 
 const THUMB_TYPES = [
   /** w1280 */
@@ -11,35 +11,32 @@ const THUMB_TYPES = [
   'mqdefault.jpg',
   /** w120 */
   'default.jpg',
-];
+]
 
 export const getYtThumbnail = async (videoId: string) => {
   // 画像をロードする処理
   const loadImage = (src: string) => {
     return new Promise((resolve) => {
-      const img = new Image();
-      img.onload = (e) => resolve(img);
-      img.src = src;
-    });
-  };
+      const img = new Image()
+      img.onload = (e) => resolve(img)
+      img.src = src
+    })
+  }
 
   for (let i = 0; i < THUMB_TYPES.length; i++) {
-    const fileName = `https://img.youtube.com/vi/${videoId}/${THUMB_TYPES[i]}`;
+    const fileName = `https://img.youtube.com/vi/${videoId}/${THUMB_TYPES[i]}`
 
-      const res: any = await loadImage(fileName);
+    const res: any = await loadImage(fileName)
 
     // ダミー画像じゃなかったら（横幅が121px以上だったら）
     // もしくは、これ以上小さい解像度が無かった場合は、このURLで決定
-    if (
-      !THUMB_TYPES[i + 1]
-        || (res).width > 120
-    ) {
-      return fileName;
+    if (!THUMB_TYPES[i + 1] || res.width > 120) {
+      return fileName
     }
   }
-};
+}
 
-(async () => {
- const urltest = await getYtThumbnail('sqEd2W6TEgk')
- // console.log(urltest)
+;(async () => {
+  const urltest = await getYtThumbnail('sqEd2W6TEgk')
+  // console.log(urltest)
 })()

@@ -23,7 +23,7 @@ const UpcomingPanel: React.VFC<Props> = React.memo((props) => {
 
   return (
     <div>
-      <li className='flex flex-wrap sm:px-[10px] md:w-[20vw] max-md:justify-evenly'>
+      <li className="flex flex-wrap sm:px-[10px] md:w-[20vw] max-md:justify-evenly">
         {props.holoData.map((holoDatas: Api) => {
           return holoDatas.channel.org === 'Hololive' &&
             holoDatas.status === 'upcoming' &&
@@ -48,7 +48,7 @@ const UpcomingPanel: React.VFC<Props> = React.memo((props) => {
             holoDatas.channel.id !== 'UCDRWSO281bIHYVi-OV3iFYA' &&
             holoDatas.channel.id !== '' &&
             holoDatas.channel.id !== 'UCWsfcksUUpoEvhia0_ut0bA' ? (
-            <div className=''>
+            <div className="">
               <img
                 onClick={() => window.open(`https://www.youtube.com/watch?v=${holoDatas.id}`)}
                 key={holoDatas.id}
@@ -60,19 +60,19 @@ const UpcomingPanel: React.VFC<Props> = React.memo((props) => {
                 }
               />
               {/* src={youtube_jpeg + holoDatas.id + youtube_jpeg_size.large} /> */}
-              <p className='relative inline text-[clamp(14px,1.5vw,16px)] text-slate-300 opacity-[0.9] hover:opacity-[0.3] max-md:text-[14px]'>
+              <p className="relative inline text-[clamp(14px,1.5vw,16px)] text-slate-300 opacity-[0.9] hover:opacity-[0.3] max-md:text-[14px]">
                 {parseInt(holoDatas.start_scheduled.slice(11, -8)) + 9 < 25
                   ? parseInt(holoDatas.start_scheduled.slice(11, -8)) + 9 + ':00'
                   : parseInt(holoDatas.start_scheduled.slice(11, -8)) - 15 + ':00'}
               </p>
-              <p className='w-[26vw] font-sans text-slate-300 max-md:text-[12px] max-sm:w-[35vw]'>
+              <p className="w-[26vw] font-sans text-slate-300 max-md:text-[12px] max-sm:w-[35vw]">
                 {holoDatas.title}
               </p>
             </div>
           ) : null
         })}
       </li>
-      <h2 className='mt-1 mb-6 ml-[0.7rem] text-[clamp(14px,1.5vw,16px)] text-white opacity-20 hover:opacity-80 max-sm:text-[11px]'>
+      <h2 className="mt-1 mb-6 ml-[0.7rem] text-[clamp(14px,1.5vw,16px)] text-white opacity-20 hover:opacity-80 max-sm:text-[11px]">
         放送予定
       </h2>
     </div>

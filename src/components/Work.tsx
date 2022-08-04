@@ -6,15 +6,13 @@ type Props = {
 }
 
 export const WorkContainer: React.FC<Props> = ({ children }) => (
-  <div className="w-full min-h-screen grid grid-cols-1 lg:grid-cols-2">
-    {children}
-  </div>
+  <div className="w-full min-h-screen grid grid-cols-1 lg:grid-cols-2">{children}</div>
 )
 
 export const WorkBackground: React.FC = () => (
   <div className="sticky top-0 w-full min-h-screen grid grid-cols-1 lg:grid-cols-2">
-    <div className="bg-[#112] h-[30vh] lg:h-auto"></div>
-    <div className="bg-[#112] h-[70vh] lg:min-h-screen"></div>
+    <div className="h-[30vh] bg-[#112] lg:h-auto"></div>
+    <div className="h-[70vh] bg-[#112] lg:min-h-screen"></div>
   </div>
 )
 
@@ -26,7 +24,7 @@ export const WorkLeft: React.FC<{
   if (progress > 0.85) translateY = Math.max(-50, -(progress - 0.85) * 2 * 50)
   return (
     <div
-      className="flex flex-col items-center justify-center text-3xl lg:text-3xl h-[30vh] lg:h-auto"
+      className="flex h-[30vh] flex-col items-center justify-center text-3xl lg:h-auto lg:text-3xl"
       style={{
         transform: `translateY(${translateY}px)`,
       }}
@@ -48,7 +46,7 @@ export const WorkRight: React.FC<{
         transform: `translateY(${translateY}px)`,
       }}
     >
-      <div className="w-full max-w-md pt-10 lg:pt-0 md:px-0">{children}</div>
+      <div className="w-full max-w-md pt-10 md:px-0 lg:pt-0">{children}</div>
     </div>
   )
 }
@@ -58,6 +56,8 @@ type LinkProps = {
 }
 export const WorkLink: React.FC<LinkProps> = ({ href, children }) => (
   <Link href={href}>
-    <a target="_blank" rel='noreferrer' className='underline underline-offset-8 decoration-1'>{children}</a>
+    <a target="_blank" rel="noreferrer" className="underline decoration-1 underline-offset-8">
+      {children}
+    </a>
   </Link>
 )

@@ -8,113 +8,113 @@ type Props = {
 // eslint-disable-next-line react/display-name
 const HoloButton: React.VFC<Props> = React.memo(({ classToggle2 }) => {
   return (
-    <div className='opacity-90 flex w-[230px]  flex-wrap'>
-      <Button className='mx-1 mb-1' variant='outlined' size='small' onClick={classToggle2}>
+    <div className="flex w-[230px] flex-wrap  opacity-90">
+      <Button className="mx-1 mb-1" variant="outlined" size="small" onClick={classToggle2}>
         🛸💜
       </Button>
-      <Button className='mx-1 mb-1' variant='outlined' size='small' onClick={classToggle2}>
+      <Button className="mx-1 mb-1" variant="outlined" size="small" onClick={classToggle2}>
         🎣
       </Button>
-      <Button className='mx-1 mb-1' variant='outlined' size='small' onClick={classToggle2}>
+      <Button className="mx-1 mb-1" variant="outlined" size="small" onClick={classToggle2}>
         🍃
       </Button>
-      <Button className='mx-1 mb-1' variant='outlined' size='small' onClick={classToggle2}>
+      <Button className="mx-1 mb-1" variant="outlined" size="small" onClick={classToggle2}>
         🧪
       </Button>
-      <Button className='mx-1 mb-1' variant='outlined' size='small' onClick={classToggle2}>
+      <Button className="mx-1 mb-1" variant="outlined" size="small" onClick={classToggle2}>
         🥀
       </Button>
-      <Button className='mx-1 mb-1' variant='outlined' size='small' onClick={classToggle2}>
+      <Button className="mx-1 mb-1" variant="outlined" size="small" onClick={classToggle2}>
         🐻
       </Button>
-      <Button className='mx-1 mb-1' variant='outlined' size='small' onClick={classToggle2}>
+      <Button className="mx-1 mb-1" variant="outlined" size="small" onClick={classToggle2}>
         🌸
       </Button>
-      <Button className='mx-1 mb-1' variant='outlined' size='small' onClick={classToggle2}>
+      <Button className="mx-1 mb-1" variant="outlined" size="small" onClick={classToggle2}>
         ☄️
       </Button>
-      <Button className='mx-1 mb-1' variant='outlined' size='small' onClick={classToggle2}>
+      <Button className="mx-1 mb-1" variant="outlined" size="small" onClick={classToggle2}>
         🍑🥟
       </Button>
-      <Button className='mx-1 mb-1' variant='outlined' size='small' onClick={classToggle2}>
+      <Button className="mx-1 mb-1" variant="outlined" size="small" onClick={classToggle2}>
         🎪
       </Button>
-      <Button className='mx-1 mb-1' variant='outlined' size='small' onClick={classToggle2}>
+      <Button className="mx-1 mb-1" variant="outlined" size="small" onClick={classToggle2}>
         &#x264C;
       </Button>
-      <Button className='mx-1 mb-1' variant='outlined' size='small' onClick={classToggle2}>
+      <Button className="mx-1 mb-1" variant="outlined" size="small" onClick={classToggle2}>
         🤖
       </Button>
-      <Button className='mx-1 mb-1' variant='outlined' size='small' onClick={classToggle2}>
+      <Button className="mx-1 mb-1" variant="outlined" size="small" onClick={classToggle2}>
         👾
       </Button>
-      <Button className='mx-1 mb-1' variant='outlined' size='small' onClick={classToggle2}>
+      <Button className="mx-1 mb-1" variant="outlined" size="small" onClick={classToggle2}>
         🐏
       </Button>
-      <Button className='mx-1 mb-1' variant='outlined' size='small' onClick={classToggle2}>
+      <Button className="mx-1 mb-1" variant="outlined" size="small" onClick={classToggle2}>
         🍬
       </Button>
-      <Button className='mx-1 mb-1' variant='outlined' size='small' onClick={classToggle2}>
+      <Button className="mx-1 mb-1" variant="outlined" size="small" onClick={classToggle2}>
         🐉
       </Button>
-      <Button className='mx-1 mb-1' variant='outlined' size='small' onClick={classToggle2}>
+      <Button className="mx-1 mb-1" variant="outlined" size="small" onClick={classToggle2}>
         &#x26C4;&#xFE0F;
       </Button>
-      <Button className='mx-1 mb-1' variant='outlined' size='small' onClick={classToggle2}>
+      <Button className="mx-1 mb-1" variant="outlined" size="small" onClick={classToggle2}>
         🦋
       </Button>
-      <Button className='mx-1 mb-1' variant='outlined' size='small' onClick={classToggle2}>
+      <Button className="mx-1 mb-1" variant="outlined" size="small" onClick={classToggle2}>
         💫
       </Button>
-      <Button className='mx-1 mb-1' variant='outlined' size='small' onClick={classToggle2}>
+      <Button className="mx-1 mb-1" variant="outlined" size="small" onClick={classToggle2}>
         👯🥕
       </Button>
-      <Button className='mx-1 mb-1' variant='outlined' size='small' onClick={classToggle2}>
+      <Button className="mx-1 mb-1" variant="outlined" size="small" onClick={classToggle2}>
         ❤️
       </Button>
-      <Button className='mx-1 mb-1' variant='outlined' size='small' onClick={classToggle2}>
+      <Button className="mx-1 mb-1" variant="outlined" size="small" onClick={classToggle2}>
         🏴‍☠️
       </Button>
-      <Button className='mx-1 mb-1' variant='outlined' size='small' onClick={classToggle2}>
+      <Button className="mx-1 mb-1" variant="outlined" size="small" onClick={classToggle2}>
         &#x2694;&#xFE0F;
       </Button>
-      <Button className='mx-1 mb-1' variant='outlined' size='small' onClick={classToggle2}>
+      <Button className="mx-1 mb-1" variant="outlined" size="small" onClick={classToggle2}>
         🔥
       </Button>
-      <Button className='mx-1 mb-1' variant='outlined' size='small' onClick={classToggle2}>
+      <Button className="mx-1 mb-1" variant="outlined" size="small" onClick={classToggle2}>
         🍎
       </Button>
-      <Button className='mx-1 mb-1' variant='outlined' size='small' onClick={classToggle2}>
+      <Button className="mx-1 mb-1" variant="outlined" size="small" onClick={classToggle2}>
         🏮
       </Button>
-      <Button className='mx-1 mb-1' variant='outlined' size='small' onClick={classToggle2}>
+      <Button className="mx-1 mb-1" variant="outlined" size="small" onClick={classToggle2}>
         🌟
       </Button>
-      <Button className='mx-1 mb-1' variant='outlined' size='small' onClick={classToggle2}>
+      <Button className="mx-1 mb-1" variant="outlined" size="small" onClick={classToggle2}>
         🌽🦊
       </Button>
-      <Button className='mx-1 mb-1' variant='outlined' size='small' onClick={classToggle2}>
+      <Button className="mx-1 mb-1" variant="outlined" size="small" onClick={classToggle2}>
         🚑🐥
       </Button>
-      <Button className='mx-1 mb-1' variant='outlined' size='small' onClick={classToggle2}>
+      <Button className="mx-1 mb-1" variant="outlined" size="small" onClick={classToggle2}>
         🌲🐺
       </Button>
-      <Button className='mx-1 mb-1' variant='outlined' size='small' onClick={classToggle2}>
+      <Button className="mx-1 mb-1" variant="outlined" size="small" onClick={classToggle2}>
         😈
       </Button>
-      <Button className='mx-1 mb-1' variant='outlined' size='small' onClick={classToggle2}>
+      <Button className="mx-1 mb-1" variant="outlined" size="small" onClick={classToggle2}>
         💋
       </Button>
-      <Button className='mx-1 mb-1' variant='outlined' size='small' onClick={classToggle2}>
+      <Button className="mx-1 mb-1" variant="outlined" size="small" onClick={classToggle2}>
         ⚓️
       </Button>
-      <Button className='mx-1 mb-1' variant='outlined' size='small' onClick={classToggle2}>
+      <Button className="mx-1 mb-1" variant="outlined" size="small" onClick={classToggle2}>
         🌙
       </Button>
-      <Button className='mx-1 mb-1' variant='outlined' size='small' onClick={classToggle2}>
+      <Button className="mx-1 mb-1" variant="outlined" size="small" onClick={classToggle2}>
         🍙
       </Button>
-      <Button className='mx-1 mb-1' variant='outlined' size='small' onClick={classToggle2}>
+      <Button className="mx-1 mb-1" variant="outlined" size="small" onClick={classToggle2}>
         🥐
       </Button>
     </div>

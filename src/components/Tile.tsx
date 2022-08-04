@@ -16,10 +16,7 @@ export const TileContext = React.createContext<TileContextValue>({
   currentPage: 0,
 })
 
-export const TileWrapper: React.FC<WrapperProps> = ({
-  children,
-  numOfPages,
-}) => {
+export const TileWrapper: React.FC<WrapperProps> = ({ children, numOfPages }) => {
   const { scrollY } = useContext(ScrollContext)
   const refContainer = useRef<HTMLDivElement>(null)
 
@@ -31,10 +28,7 @@ export const TileWrapper: React.FC<WrapperProps> = ({
     const screenH = window.innerHeight
     const halfH = screenH / 2
     const percentY =
-      Math.min(
-        clientHeight + halfH,
-        Math.max(-screenH, scrollY - offsetTop) + halfH
-      ) / clientHeight
+      Math.min(clientHeight + halfH, Math.max(-screenH, scrollY - offsetTop) + halfH) / clientHeight
     currentPage = percentY * numOfPages
   }
 

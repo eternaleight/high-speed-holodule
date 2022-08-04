@@ -17,14 +17,14 @@ const HoloBigIcon: React.FC = () => (
           <WorkContainer>
             <WorkLeft progress={progress}>
               <div>hololive 2期生</div>
-              <div className='text-4xl font-semibold tracking-[0.015] md:text-5xl'>
-                <WorkLink href='https://www.youtube.com/channel/UC1opHUrw8rvnsadT-iGp7Cg'>
+              <div className="text-4xl font-semibold tracking-[0.015] md:text-5xl">
+                <WorkLink href="https://www.youtube.com/channel/UC1opHUrw8rvnsadT-iGp7Cg">
                   湊あくあ
                 </WorkLink>
                 &nbsp;Minato aqua
               </div>
-              <div className='relative'>
-                <span className='duration-0 absolute top-1 max-w-[250px] px-1 text-sm opacity-90 hover:z-10 hover:opacity-100 '>
+              <div className="relative">
+                <span className="duration-0 absolute top-1 max-w-[250px] px-1 text-sm opacity-90 hover:z-10 hover:opacity-100 ">
                   YouTube Aqua Ch. 湊あくあ
                   <br />
                   ファンの愛称 あくあクルー
@@ -48,13 +48,13 @@ const HoloBigIcon: React.FC = () => (
               </div>
             </WorkLeft>
             <WorkRight progress={progress}>
-              <div className='max-lg:relative max-lg:-top-32'>
+              <div className="max-lg:relative max-lg:-top-32">
                 <Image
-                  src='/assets/holo/aqua.png'
-                  layout='responsive'
+                  src="/assets/holo/aqua.png"
+                  layout="responsive"
                   width={284}
                   height={534}
-                  alt='Minato aqua'
+                  alt="Minato aqua"
                 />
               </div>
             </WorkRight>
@@ -67,14 +67,14 @@ const HoloBigIcon: React.FC = () => (
           <WorkContainer>
             <WorkLeft progress={progress}>
               <div>hololive 1期生</div>
-              <div className='text-4xl font-semibold tracking-tight md:text-5xl'>
-                <WorkLink href='https://www.youtube.com/channel/UC1CfXB_kRs3C-zaeTG3oGyg'>
+              <div className="text-4xl font-semibold tracking-tight md:text-5xl">
+                <WorkLink href="https://www.youtube.com/channel/UC1CfXB_kRs3C-zaeTG3oGyg">
                   赤井はあと
                 </WorkLink>
                 &nbsp;Akai haato
               </div>
-              <div className='relative'>
-                <span className='duration-0 absolute top-1 max-w-[250px] px-1 text-sm opacity-90 hover:z-10 hover:opacity-100 '>
+              <div className="relative">
+                <span className="duration-0 absolute top-1 max-w-[250px] px-1 text-sm opacity-90 hover:z-10 hover:opacity-100 ">
                   YouTube HAACHAMA Ch 赤井はあと
                   <br />
                   ファンの愛称 はあとん
@@ -96,13 +96,13 @@ const HoloBigIcon: React.FC = () => (
               </div>
             </WorkLeft>
             <WorkRight progress={progress}>
-              <div className='max-lg:relative max-lg:-top-28'>
+              <div className="max-lg:relative max-lg:-top-28">
                 <Image
-                  src='/assets/holo/haato.png'
-                  layout='responsive'
+                  src="/assets/holo/haato.png"
+                  layout="responsive"
                   width={230}
                   height={463}
-                  alt='Akai haato'
+                  alt="Akai haato"
                 />
               </div>
             </WorkRight>
@@ -114,15 +114,15 @@ const HoloBigIcon: React.FC = () => (
         renderContent={({ progress }) => (
           <WorkContainer>
             <WorkLeft progress={progress}>
-              <div className='md:pl-[4.8vw] max-md:pl-3'>hololive 2期生</div>
-              <div className='text-4xl pl-3 font-semibold tracking-tight md:pl-[4.8vw] md:text-5xl'>
-                <WorkLink href='https://www.youtube.com/channel/UCXTpFs_3PqI41qX2d9tL2Rw'>
+              <div className="md:pl-[4.8vw] max-md:pl-3">hololive 2期生</div>
+              <div className="pl-3 text-4xl font-semibold tracking-tight md:pl-[4.8vw] md:text-5xl">
+                <WorkLink href="https://www.youtube.com/channel/UCXTpFs_3PqI41qX2d9tL2Rw">
                   紫咲シオン
                 </WorkLink>
                 &nbsp;Murasaki shion
               </div>
-              <div className='relative'>
-                <span className='duration-0 max-md:pl-3 absolute top-1 max-w-[250px] px-1 text-sm opacity-90 hover:z-10 hover:opacity-100 md:left-[5vw]'>
+              <div className="relative">
+                <span className="duration-0 absolute top-1 max-w-[250px] px-1 text-sm opacity-90 hover:z-10 hover:opacity-100 md:left-[5vw] max-md:pl-3">
                   YouTube Shion Ch. 紫咲シオン
                   <br />
                   ファンの愛称 塩っ子
@@ -145,14 +145,14 @@ const HoloBigIcon: React.FC = () => (
               </div>
             </WorkLeft>
             <WorkRight progress={progress}>
-              <div className='scale-[1.18]'>
-                <div className='max-lg:relative max-lg:-top-[74px]'>
+              <div className="scale-[1.18]">
+                <div className="max-lg:relative max-lg:-top-[74px]">
                   <Image
-                    src='/assets/holo/shion.png'
-                    layout='responsive'
+                    src="/assets/holo/shion.png"
+                    layout="responsive"
                     width={100}
                     height={150}
-                    alt='Muraski shion'
+                    alt="Muraski shion"
                   />
                 </div>
               </div>
