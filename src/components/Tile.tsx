@@ -56,7 +56,7 @@ export const TileBackground: React.FC<Children> = ({ children }) => (
 )
 
 export const TileContent: React.FC<Children> = ({ children }) => (
-  <div className="sticky top-0 h-screen overflow-hidden">{children}</div>
+  <div className="sticky top-0 h-[120vh] overflow-hidden">{children}</div>
 )
 
 type Props = {
