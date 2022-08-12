@@ -28,7 +28,7 @@ export const TileWrapper: React.FC<WrapperProps> = ({ children, numOfPages }) =>
     const screenH = window.innerHeight
     const halfH = screenH / 2
     const percentY =
-      Math.min(clientHeight + halfH, Math.max(-screenH, scrollY - offsetTop) + screenH) / clientHeight
+      Math.min(clientHeight + halfH, Math.max(-screenH, scrollY - offsetTop) + halfH) / clientHeight
     currentPage = percentY * numOfPages
   }
 
