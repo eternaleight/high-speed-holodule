@@ -4,6 +4,7 @@ import Header from '../components/Header'
 import Main from '../components/Main'
 import { HeadMeta } from '../components/Head'
 import HoloBigIcon from '../components/HoloBigIcon'
+import Button from '@mui/material/Button'
 
 const Home: NextPage = () => {
   const [icon, setIcon] = useState<boolean>(false)
@@ -22,9 +23,17 @@ const Home: NextPage = () => {
         <div>
           <div
             onClick={() => setIcon(false)}
-            className="btn-real fixed bottom-[20px] right-[20px] z-10  h-[60px] w-[60px] cursor-pointer opacity-20 hover:opacity-100"
+            className="btn-real fixed bottom-[20px] right-[20px] z-10  h-[60px] w-[60px] cursor-pointer opacity-80"
           >
-            <i className="fa fa-home absolute top-[-10px] left-[7px] h-[30%] w-[30%]"></i>
+                      <Button
+                        className="p-3 py-3 text-center"
+                        variant="outlined"
+                        size="small"
+                        onClick={() => setIcon(!false)}
+                      >
+            <i className="fa fa-home"></i>
+            {/* <i className="fa fa-home absolute top-[-10px] left-[7px] h-[30%] w-[30%]"></i> */}
+                      </Button>
           </div>
           <h2 className="text-3xl text-center text-white animate-pulse2 animate-bounce2">
             Scroll down↓
