@@ -23,5 +23,10 @@
   "globals": {
     "window": true,
     "setTimeout": true
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "jasmine": true
   }
 }
