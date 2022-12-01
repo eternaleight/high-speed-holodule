@@ -58,7 +58,7 @@ const Main: React.VFC<Props> = React.memo(({ setIcon }) => {
 
   const holoVideo = 'https://www.youtube.com/watch?v='
   const holoUrl = 'https://holodex.net/api/v2/live/'
-  const holoUrl2 = 'https://api.holotools.app/v1/videos/'
+  // const holoUrl2 = 'https://api.holotools.app/v1/videos/'
 
   useEffect(() => {
     (async () => {
