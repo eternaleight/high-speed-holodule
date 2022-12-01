@@ -61,7 +61,7 @@ const Main: React.VFC<Props> = React.memo(({ setIcon }) => {
   const holoUrl2 = 'https://api.holotools.app/v1/videos/'
 
   useEffect(() => {
-    ;(async () => {
+    (async () => {
       const res = await fetch(holoUrl)
       const users = await res.json()
       setHoloData(users)
