@@ -19,5 +19,9 @@
     "react": {
       "version": "detect"
     }
+  },
+  "globals": {
+    "window": true,
+    "setTimeout": true
   }
 }
