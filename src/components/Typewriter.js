@@ -56,7 +56,7 @@ class TypeWriter extends React.PureComponent {
 
     this.setState({ text: newText })
 
-    window.setTimeout(() => {
+    setTimeout(() => {
       this.tick()
     }, delta)
   }
