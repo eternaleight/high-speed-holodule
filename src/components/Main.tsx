@@ -6,6 +6,7 @@ import TypeWriter from './Typewriter'
 import LivePanel from './LivePanel'
 import UpcomingPanel from './UpcomingPanel'
 import TabButton from './TabButton'
+import { isCorrectLiveHoloUrl } from '../../utils/util'
 
 export type Api = {
   available_at: string
@@ -61,7 +62,7 @@ const Main: React.VFC<Props> = React.memo(({ setIcon }) => {
   // const holoUrl2 = 'https://api.holotools.app/v1/videos/'
 
   useEffect(() => {
-    (async () => {
+    ;(async () => {
       const res = await fetch(holoUrl)
       const users = await res.json()
       setHoloData(users)
@@ -84,29 +85,7 @@ const Main: React.VFC<Props> = React.memo(({ setIcon }) => {
     <div>
       <div className="flex w-[100vw] flex-wrap">
         {holoData.map((holoDatas: Api) => {
-          return holoDatas.channel.org === 'Hololive' &&
-            holoDatas.status === 'live' &&
-            holoDatas.channel.id !== 'UCKeAhJvy8zgXWbh9duVjIaQ' &&
-            holoDatas.channel.id !== 'UCZgOv3YDEs-ZnZWDYVwJdmA' &&
-            holoDatas.channel.id !== 'UC9mf_ZVpouoILRY9NUIaK-w' &&
-            holoDatas.channel.id !== 'UCNVEsYbiZjH5QLmGeSgTSzg' &&
-            holoDatas.channel.id !== 'UCGNI4MENvnsymYjKiZwv9eg' &&
-            holoDatas.channel.id !== 'UCANDOlYTJT7N5jlRC3zfzVA' &&
-            holoDatas.channel.id !== 'UChSvpZYRPh0FvG4SJGSga3g' &&
-            holoDatas.channel.id !== 'UCwL7dgTxKo8Y4RFIKWaf8gA' &&
-            holoDatas.channel.id !== 'UC6t3-_N8A6ME1JShZHHqOMw' &&
-            holoDatas.channel.id !== '' &&
-            holoDatas.channel.id !== 'UCc88OV45ICgHbn3ZqLLb52w' &&
-            holoDatas.channel.id !== 'UCgRqGV1gBf2Esxh0Tz1vxzw' &&
-            holoDatas.channel.id !== 'UCkT1u65YS49ca_LsFwcTakw' &&
-            holoDatas.channel.id !== 'UCdfMHxjcCc2HSd9qFvfJgjg' &&
-            holoDatas.channel.id !== '' &&
-            holoDatas.channel.id !== 'UCyxtGMdWlURZ30WSnEjDOQw' &&
-            holoDatas.channel.id !== 'UC7MMNHR-kf9EN1rXiesMTMw' &&
-            holoDatas.channel.id !== 'UC2hx0xVkMoHGWijwr_lA01w' &&
-            holoDatas.channel.id !== 'UCDRWSO281bIHYVi-OV3iFYA' &&
-            holoDatas.channel.id !== '' &&
-            holoDatas.channel.id !== 'UCWsfcksUUpoEvhia0_ut0bA' ? (
+          return isCorrectLiveHoloUrl(holoDatas) ? (
             <div>
               <Image
                 width={100}
