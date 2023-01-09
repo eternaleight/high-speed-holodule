@@ -1,4 +1,5 @@
 import React from 'react'
+import { isCorrectScheduleHoloUrl } from '../../utils/util'
 import type { Api } from './Main'
 
 type Props = {
@@ -25,29 +26,7 @@ const UpcomingPanel: React.VFC<Props> = React.memo((props) => {
     <div>
       <li className="flex flex-wrap sm:px-[10px] md:w-[20vw] max-md:justify-evenly">
         {props.holoData.map((holoDatas: Api) => {
-          return holoDatas.channel.org === 'Hololive' &&
-            holoDatas.status === 'upcoming' &&
-            holoDatas.channel.id !== 'UCKeAhJvy8zgXWbh9duVjIaQ' &&
-            holoDatas.channel.id !== 'UCZgOv3YDEs-ZnZWDYVwJdmA' &&
-            holoDatas.channel.id !== 'UC9mf_ZVpouoILRY9NUIaK-w' &&
-            holoDatas.channel.id !== 'UCNVEsYbiZjH5QLmGeSgTSzg' &&
-            holoDatas.channel.id !== 'UCGNI4MENvnsymYjKiZwv9eg' &&
-            holoDatas.channel.id !== 'UCANDOlYTJT7N5jlRC3zfzVA' &&
-            holoDatas.channel.id !== 'UChSvpZYRPh0FvG4SJGSga3g' &&
-            holoDatas.channel.id !== 'UCwL7dgTxKo8Y4RFIKWaf8gA' &&
-            holoDatas.channel.id !== 'UC6t3-_N8A6ME1JShZHHqOMw' &&
-            holoDatas.channel.id !== '' &&
-            holoDatas.channel.id !== 'UCc88OV45ICgHbn3ZqLLb52w' &&
-            holoDatas.channel.id !== 'UCgRqGV1gBf2Esxh0Tz1vxzw' &&
-            holoDatas.channel.id !== 'UCkT1u65YS49ca_LsFwcTakw' &&
-            holoDatas.channel.id !== 'UCdfMHxjcCc2HSd9qFvfJgjg' &&
-            holoDatas.channel.id !== '' &&
-            holoDatas.channel.id !== 'UCyxtGMdWlURZ30WSnEjDOQw' &&
-            holoDatas.channel.id !== 'UC7MMNHR-kf9EN1rXiesMTMw' &&
-            holoDatas.channel.id !== 'UC2hx0xVkMoHGWijwr_lA01w' &&
-            holoDatas.channel.id !== 'UCDRWSO281bIHYVi-OV3iFYA' &&
-            holoDatas.channel.id !== '' &&
-            holoDatas.channel.id !== 'UCWsfcksUUpoEvhia0_ut0bA' ? (
+          return isCorrectScheduleHoloUrl(holoDatas) ? (
             <div className="">
               <img
                 onClick={() => window.open(`https://www.youtube.com/watch?v=${holoDatas.id}`)}
