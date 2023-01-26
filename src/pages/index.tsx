@@ -25,15 +25,14 @@ const Home: NextPage = () => {
             onClick={() => setIcon(false)}
             className="btn-real fixed bottom-[20px] right-[20px] z-10  h-[60px] w-[60px] cursor-pointer opacity-80"
           >
-                      <Button
-                        className="p-3 py-3 text-center"
-                        variant="outlined"
-                        size="small"
-                        onClick={() => setIcon(!false)}
-                      >
-            <i className="fa fa-home"></i>
-            {/* <i className="fa fa-home absolute top-[-10px] left-[7px] h-[30%] w-[30%]"></i> */}
-                      </Button>
+            <Button
+              className="p-3 py-3 text-center"
+              variant="outlined"
+              size="small"
+              onClick={() => setIcon(!false)}
+            >
+              <i className="fa fa-home"></i>
+            </Button>
           </div>
           <h2 className="text-3xl text-center text-white animate-pulse2 animate-bounce2">
             Scroll down↓
